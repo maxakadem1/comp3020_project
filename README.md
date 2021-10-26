@@ -19,3 +19,7 @@
 - Started working on the left side bar
 - Added icon library and guideline for future use 
 - Added charts library from Charts.js
+
+26.10.2021 - Max
+- Added bootstrap to the project
+- Removed unnececary code that was used for testing 
