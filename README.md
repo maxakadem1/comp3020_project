@@ -14,6 +14,8 @@
 
 22.09.2021 - Max
 - Added main files to the repo (styles.css/ index.html/ app.js)
+
 25.10.2021 - Max
 - Started working on the left side bar
 - Added icon library and guideline for future use 
+- Added charts library from Charts.js
