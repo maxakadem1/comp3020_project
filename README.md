@@ -23,3 +23,6 @@
 26.10.2021 - Max
 - Added bootstrap to the project
 - Removed unnececary code that was used for testing 
+
+29.10.2021 - Max
+- Added rough top navbar
