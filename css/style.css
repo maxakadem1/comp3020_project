@@ -30,32 +30,33 @@ header{
     padding: 30px 10%;
 }
 
-.nav__links{
+.sidebar{
     list-style: none;
 }
 
-.nav__links li{
+.sidebar li{
    display: inline-block;
    padding: 0px 20px;
 }
 
-.nav__links li a i{
+.sidebar li a i{
     transition: all 0.3s ease 0s;
 }
 
-.nav__links li a i:hover{
+.sidebar li a i:hover{
     color:#0088a9;
 }
 
 button{
     padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
+    background-color: rgb(234, 236, 67,1);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    color: black!important;
 }
 
 button:hover{
-    background-color: rgba(0,136,169,0.8);
+    background-color: rgba(234,236,67,0.8);
 }

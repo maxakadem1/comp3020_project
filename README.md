@@ -1,6 +1,5 @@
 # comp3020 project
-==================
-https://maxakadem1.github.io/comp3020_project/
+====================
 
 # Guides
 1) How to use fonts:
