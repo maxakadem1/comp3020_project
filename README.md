@@ -23,3 +23,7 @@
 26.10.2021 - Max
 - Added bootstrap to the project
 - Removed unnececary code that was used for testing 
+
+30.10.2021 - Max
+- Changed left side bar to top side bar
+- Added a bootstap folder to the js and css folder. Bootstrap fully implemented
