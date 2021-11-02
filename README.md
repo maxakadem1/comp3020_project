@@ -28,3 +28,9 @@
 - Changed left side bar to top side bar
 - Added a bootstap folder to the js and css folder. Bootstrap fully implemented
 - Some minor changes to the design
+
+1.11.2021 - Max
+- Full project change. All previous files removed. New Bootstrap files added. 
+- Main page created
+- Nav bar created
+- Log in page created
