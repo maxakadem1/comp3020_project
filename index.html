@@ -17,15 +17,8 @@
 <div class="container">
     <nav class="navbar navbar-expand-md navbar-light">
         <a href="#" class="navbar-brand">GameStat</a>
-        <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#toggleMobileMenu"
-                aria-controls="toggleMobileMenu"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu"
+                aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="toggleMobileMenu">
@@ -71,21 +64,37 @@
     </div>
 </div>
 
-<div class ="w-50">
-    <canvas id="myChart"></canvas>
+
+<div class="container">
+    <div class="row">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group-large mr-2" role="group" aria-label="First group">
+                <button type="button" class="btn btn-block btn-outline-dark btn-light" onclick="hidePlaytimeAll()">All
+                </button>
+                <button type="button" class="btn btn-block btn-outline-dark btn-light">Week</button>
+                <button type="button" class="btn btn-block btn-outline-dark btn-light">Month</button>
+                <button type="button" class="btn btn-block btn-outline-dark btn-light">Year</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="playtime-all" class="col-md-12 collapse">
+        <canvas id="myChart"></canvas>
+    </div>
 </div>
 
 <script src="js/playtime.js"></script>
 
 <script>
-    // === include 'setup' then 'config' above ===
-
     new Chart(
         document.getElementById('myChart'),
         config
     );
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="js/chart-selector.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 </html>
