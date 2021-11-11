@@ -24,6 +24,10 @@
 - Added bootstrap to the project
 - Removed unnececary code that was used for testing 
 
+30.10.2021 - Yengin
+- Reorganized repo
+- First chart created
+
 30.10.2021 - Max
 - Changed left side bar to top side bar
 - Added a bootstap folder to the js and css folder. Bootstrap fully implemented
@@ -34,3 +38,7 @@
 - Main page created
 - Nav bar created
 - Log in page created
+
+10.11.2021 - Yengin
+- Added missed closing tag in main
+- Charts resized
