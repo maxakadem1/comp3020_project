@@ -1,15 +1,25 @@
 
+
+// const weeks
+
+
 // <block:setup:1>
-const labels = [
+const Year = [
     'January',
     'February',
     'March',
     'April',
     'May',
     'June',
+    'July',
+    'Aug',
+    'sept',
+    'October',
+    'November',
+    'December'
 ];
 const data = {
-    labels: labels,
+    labels: Year,
     datasets: [{
         label: 'Play Time',
         backgroundColor: 'rgb(255, 99, 132, 0.7)',
@@ -28,7 +38,7 @@ const config = {
             y: {
                 title: {
                     display: true,
-                    text: 'Time (s)'
+                    text: 'Time (hr)'
                 }
             },
             x: {
