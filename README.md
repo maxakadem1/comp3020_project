@@ -42,3 +42,7 @@
 10.11.2021 - Yengin
 - Added missed closing tag in main
 - Charts resized
+
+11.11.2021 - Yengin
+- Created playtime data
+- Implemented logic for dynamic updating to playtime charts
