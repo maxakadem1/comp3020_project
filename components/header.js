@@ -18,7 +18,7 @@ class Header extends HTMLElement {
                             <li><a href="playtime.html" class="nav-link">Playtime</a></li>                                                        
                             <li><a href="#" class="nav-link">Spending</a></li>                                              
                             <li><a href="#" class="nav-link">Global Rankings</a></li>
-                            <li><a href="#" class="nav-link">Favourite tags</a></li>
+                            <li><a href="tags.html" class="nav-link">Favourite Tags</a></li>
                             <li><a href="#" class="nav-link">Goals</a></li>
                             <li><a href="#" class="nav-link">Library</a></li>
                             <li> <a href="../signin/signin.html" class="nav-link">Log In</a></li>
