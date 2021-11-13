@@ -46,3 +46,7 @@
 11.11.2021 - Yengin
 - Created playtime data
 - Implemented logic for dynamic updating to playtime charts
+
+12.11.2021 - Yengin
+- Componentized the header
+- Restructured repo
