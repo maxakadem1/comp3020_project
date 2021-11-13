@@ -50,3 +50,6 @@
 12.11.2021 - Yengin
 - Componentized the header
 - Restructured repo
+
+13.11.2021 - Yengin
+- Created Tags chart
