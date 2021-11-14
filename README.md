@@ -53,3 +53,6 @@
 
 13.11.2021 - Yengin
 - Created Tags chart
+- Created Spending charts
+- Generated data for tag/spending
+- Created Global ranking page

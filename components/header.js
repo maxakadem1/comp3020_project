@@ -17,7 +17,7 @@ class Header extends HTMLElement {
                             <li><a href="index.html" class="nav-link">Dashboard</a></li>
                             <li><a href="playtime.html" class="nav-link">Playtime</a></li>                                                        
                             <li><a href="spending.html" class="nav-link">Spending</a></li>                                              
-                            <li><a href="global-rank" class="nav-link">Global Rankings</a></li>
+                            <li><a href="globalRanking.html" class="nav-link">Global Rankings</a></li>
                             <li><a href="tags.html" class="nav-link">Favourite Tags</a></li>
                             <li><a href="#" class="nav-link">Goals</a></li>
                             <li><a href="#" class="nav-link">Library</a></li>
