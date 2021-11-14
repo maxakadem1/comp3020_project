@@ -42,3 +42,20 @@
 10.11.2021 - Yengin
 - Added missed closing tag in main
 - Charts resized
+
+11.11.2021 - Yengin
+- Created playtime data
+- Implemented logic for dynamic updating to playtime charts
+
+12.11.2021 - Yengin
+- Componentized the header
+- Restructured repo
+
+13.11.2021 - Yengin
+- Created Tags chart
+- Created Spending charts
+- Generated data for tag/spending
+- Created Global ranking page
+
+14.11.2021 - Yengin
+- Fixed reference error
