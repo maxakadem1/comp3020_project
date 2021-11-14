@@ -1,6 +1,6 @@
 
 const favouriteTags = ['Adventure', 'Indie', 'Multiplayer', 'Puzzle', 'Single-player', 'Strategy']
-const tagData = [1, 20, 30, 40, 50, 60]
+const tagData = [10, 20, 30, 40, 50, 60]
 const bgColours = ['rgba(255, 99, 132, 0.2)',
     'rgba(255, 159, 64, 0.2)',
     'rgba(255, 205, 86, 0.2)',
