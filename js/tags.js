@@ -45,8 +45,3 @@ const config = {
     }
 };
 // </block:config>
-
-module.exports = {
-    actions: [],
-    config: config,
-};

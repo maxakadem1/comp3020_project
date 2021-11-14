@@ -56,3 +56,6 @@
 - Created Spending charts
 - Generated data for tag/spending
 - Created Global ranking page
+
+14.11.2021 - Yengin
+- Fixed reference error
