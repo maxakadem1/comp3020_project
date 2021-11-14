@@ -35,6 +35,14 @@ const data = {
 const config = {
     type: 'doughnut',
     data: data,
+    options: {
+        plugins: {
+            title: {
+                display: true,
+                text: 'Favourite Tags'
+            }
+        }
+    }
 };
 // </block:config>
 
