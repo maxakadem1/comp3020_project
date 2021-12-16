@@ -3,7 +3,7 @@ const weekLabels = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'
     '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85', '86', '87', '88', '89', '90', '91', '92', '93', '94', '95', '96', '97', '98', '99', '100', '101', '102', '103',
     '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114', '115', '116', '117', '118', '119', '120', '121', '122', '123', '124', '125', '126', '127', '128', '129']
 const monthLabels = [
-    'Jan \'19', 'Feb\'19', 'Mar \'19', 'Apr \'19', 'May \'19', 'Jun \'19', 'Jul\'19', 'Aug \'19', 'Sep \'19' , 'Oct \'19', 'Nov \'19', 'Dec \'19',
+    'Jan \'19', 'Feb\'19', 'Mar \'19', 'Apr \'19', 'May \'19', 'Jun \'19', 'Jul\'19', 'Aug \'19', 'Sep \'19', 'Oct \'19', 'Nov \'19', 'Dec \'19',
     'Jan \'20', 'Feb \'20', 'Mar \'20', 'Apr \'20', 'May \'20', 'Jun \'20', 'Jul \'20', 'Aug \'20', 'Sep \'20', 'Oct \'20', 'Nov \'20', 'Dec \'20',
     'Jan \'21', 'Feb \'21', 'Mar \'21', 'Apr \'21', 'May \'21', 'Jun \'21']
 const yearLabels = ['2019', '2020', '2021'];
@@ -34,6 +34,7 @@ function swapData(chart, labels, dataSet, xLabel) {
     chart.config.options.scales.x.title.text = xLabel;
     chart.update();
 }
+
 function swapGloablData(chart, labels, userDataSet, globalDataSet, xLabel) {
     const newDataset = {
         labels: labels,
@@ -42,7 +43,7 @@ function swapGloablData(chart, labels, userDataSet, globalDataSet, xLabel) {
             backgroundColor: 'rgb(255, 99, 132, 0.7)',
             borderColor: 'rgb(255, 99, 132)',
             data: userDataSet
-        },{
+        }, {
             label: 'Global Users',
             backgroundColor: 'rgba(54, 162, 235, 0.7)',
             borderColor: 'rgb(54, 162, 235)',
@@ -68,12 +69,19 @@ if (document.getElementById("playtime-page")) {
 }
 
 if (document.getElementById("spending-page")) {
-    console.log('this was run')
-    document.getElementById("spend-week-btn").addEventListener("click", () => swapData(spendingChart, weekLabels, spendingWeekData, 'Week'));
-    document.getElementById("spend-month-btn").addEventListener("click", () => swapData(spendingChart, monthLabels, spendingMonthData, 'Month'));
-    document.getElementById("spend-year-btn").addEventListener("click", () => swapData(spendingChart, yearLabels, spendingYearData, 'Year'));
-}
+    console.log('debug print - spending page buttons')
+    if (document.getElementById("global-page")) {
+        document.getElementById("week-btn").addEventListener("click", () => swapGloablData(playTimeChart, weekLabels, ptWeekData, ptGlobalWeek, 'Week'));
+        document.getElementById("month-btn").addEventListener("click", () => swapGloablData(playTimeChart, monthLabels, ptMonthData, 'Month'));
+        document.getElementById("year-btn").addEventListener("click", () => swapGloablData(playTimeChart, yearLabels, ptYearData, 'Year'));
+    } else {
+        document.getElementById("week-btn").addEventListener("click", () => swapData(spendingChart, weekLabels, spendingWeekData, 'Week'));
+        document.getElementById("month-btn").addEventListener("click", () => swapData(spendingChart, monthLabels, spendingMonthData, 'Month'));
+        document.getElementById("year-btn").addEventListener("click", () => swapData(spendingChart, yearLabels, spendingYearData, 'Year'));
 
+    }
+
+}
 
 
 // function showPlaytime() {

@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Components -->
     <script src="../components/header.js"></script>
+    <script src="../components/timeline-buttons.js"></script>
 </head>
 <body>
 
@@ -20,15 +21,7 @@
 
 <!-- Chart -->
 <div id="playtime-page" class="container">
-    <div class="row">
-        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group-small mr-2 " role="group">
-                <button type="button" id="week-btn" class="btn btn-outline-dark btn-light">Week</button>
-                <button type="button" id="month-btn" class="btn btn-outline-dark btn-light">Month</button>
-                <button type="button" id="year-btn" class="btn btn-outline-dark btn-light">Year</button>
-            </div>
-        </div>
-    </div>
+    <timeline-buttons-component></timeline-buttons-component>
 
     <div id="playtime-week" class="col-md-12 mb">
         <canvas id="myChart"></canvas>

@@ -59,3 +59,7 @@
 
 14.11.2021 - Yengin
 - Fixed reference error
+
+15.11.2021 - Yengin
+- Componentized timeline buttons
+- fixed global charts to disaply different chart types 
