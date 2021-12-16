@@ -19,7 +19,7 @@ const data = {
 // </block:setup>
 
 // <block:config:0>
-const config = {
+const configSpending = {
     type: 'bar',
     data: data,
     options: {

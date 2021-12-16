@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div id="playtime-month" class="col-md-12 mb">
+    <div id="playtime-week" class="col-md-12 mb">
         <canvas id="myChart"></canvas>
     </div>
     <script src="../js/playtime.js"></script>
@@ -38,9 +38,9 @@
 
 <!-- Render -->
 <script>
-    const myChart = new Chart(
+    const playTimeChart = new Chart(
         document.getElementById('myChart'),
-        config
+        configPlaytime
     );
 </script>
 
