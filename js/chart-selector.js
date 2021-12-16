@@ -17,6 +17,7 @@ const ptGlobalWeek = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const spendingWeekData = [84, 0, 0, 0, 87, 0, 0, 0, 27, 0, 0, 0, 40, 0, 0, 0, 65, 0, 0, 0, 56, 0, 0, 0, 99, 0, 0, 0, 0, 0, 0, 0, 94, 0, 0, 0, 47, 0, 0, 0, 99, 0, 0, 0, 99, 0, 0, 0, 12, 0, 0, 0, 19, 0, 0, 0, 7, 0, 0, 0, 37, 0, 0, 0, 77, 0, 0, 0, 27, 0, 0, 0, 39, 0, 0, 0, 67, 0, 0, 0, 7, 0, 0, 0, 54, 0, 0, 0, 38, 0, 0, 0, 60, 0, 0, 0, 78, 0, 0, 0, 68, 0, 0, 0, 91, 0, 0, 0, 93, 0, 0, 0, 18, 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 76, 0, 0, 0, 77, 0]
 const spendingMonthData = [84, 87, 27, 40, 65, 56, 99, 0, 94, 47, 99, 99, 12, 19, 7, 37, 77, 27, 39, 67, 7, 54, 38, 60, 78, 68, 91, 93, 18, 60, 0, 76, 77]
 const spendingYearData = [797, 444, 561]
+const spendingGlobalWeek = [50, 0, 0, 0, 60, 0, 0, 0, 70, 0, 0, 0, 80, 0, 0, 0, 90, 0, 0, 0, 30, 0, 0, 0,];
 
 // Global Ranking Data
 
@@ -70,17 +71,16 @@ if (document.getElementById("playtime-page")) {
 
 if (document.getElementById("spending-page")) {
     console.log('debug print - spending page buttons')
-    if (document.getElementById("global-page")) {
-        document.getElementById("week-btn").addEventListener("click", () => swapGloablData(playTimeChart, weekLabels, ptWeekData, ptGlobalWeek, 'Week'));
-        document.getElementById("month-btn").addEventListener("click", () => swapGloablData(playTimeChart, monthLabels, ptMonthData, 'Month'));
-        document.getElementById("year-btn").addEventListener("click", () => swapGloablData(playTimeChart, yearLabels, ptYearData, 'Year'));
-    } else {
-        document.getElementById("week-btn").addEventListener("click", () => swapData(spendingChart, weekLabels, spendingWeekData, 'Week'));
-        document.getElementById("month-btn").addEventListener("click", () => swapData(spendingChart, monthLabels, spendingMonthData, 'Month'));
-        document.getElementById("year-btn").addEventListener("click", () => swapData(spendingChart, yearLabels, spendingYearData, 'Year'));
 
-    }
+    document.getElementById("spend-week-btn").addEventListener("click", () => swapData(spendingChart, weekLabels, spendingWeekData, 'Week'));
+    document.getElementById("spend-month-btn").addEventListener("click", () => swapData(spendingChart, monthLabels, spendingMonthData, 'Month'));
+    document.getElementById("spend-year-btn").addEventListener("click", () => swapData(spendingChart, yearLabels, spendingYearData, 'Year'));
 
+}
+if (document.getElementById("global-page") && document.getElementById("spending-page")) {
+    document.getElementById("spend-week-btn").addEventListener("click", () => swapGloablData(spendingChart, weekLabels, ptWeekData, spendingGlobalWeek, 'Week'));
+    document.getElementById("spend-month-btn").addEventListener("click", () => swapGloablData(spendingChart, monthLabels, ptMonthData, 'Month'));
+    document.getElementById("spend-year-btn").addEventListener("click", () => swapGloablData(spendingChart, yearLabels, ptYearData, 'Year'));
 }
 
 

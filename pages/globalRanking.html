@@ -32,17 +32,15 @@
     </div>
 
     <div id="spending-page">
-        <timeline-buttons-component></timeline-buttons-component>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group-small mr-2 " role="group">
+                <button type="button" id="spend-week-btn" class="btn btn-outline-dark btn-light">Week</button>
+                <button type="button" id="spend-month-btn" class="btn btn-outline-dark btn-light">Month</button>
+                <button type="button" id="spend-year-btn" class="btn btn-outline-dark btn-light">Year</button>
+            </div>
+        </div>
         <canvas id="Chart2"></canvas>
     </div>
-
-    <!--    <div class="chartBox">-->
-    <!--        <canvas id="Chart3"></canvas>-->
-    <!--    </div>-->
-
-    <!--    <div class="chartBox">-->
-    <!--        <canvas id="Chart4"></canvas>-->
-    <!--    </div>-->
 </div>
 
 <!-- Render-->
@@ -51,17 +49,10 @@
         document.getElementById('chart1'),
         configPlaytime
     );
+
     const spendingChart = new Chart(
         document.getElementById('Chart2'),
         config2
-    );
-    const chart3 = new Chart(
-        document.getElementById('Chart3'),
-        config3
-    );
-    const chart4 = new Chart(
-        document.getElementById('Chart4'),
-        config4
     );
 </script>
 
