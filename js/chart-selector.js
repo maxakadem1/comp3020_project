@@ -70,7 +70,7 @@ if (document.getElementById("playtime-page")) {
 }
 
 if (document.getElementById("spending-page")) {
-    console.log('debug print - spending page buttons ')
+    console.log('debug print - spending page buttons')
 
     document.getElementById("spend-week-btn").addEventListener("click", () => swapData(spendingChart, weekLabels, spendingWeekData, 'Week'));
     document.getElementById("spend-month-btn").addEventListener("click", () => swapData(spendingChart, monthLabels, spendingMonthData, 'Month'));

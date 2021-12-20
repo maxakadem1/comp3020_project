@@ -27,7 +27,6 @@ class Header extends HTMLElement {
                 </nav>
             </div>
 
-
             <div class="modal fade" id="goalsModal" tabindex="-1" aria-labelledby="Goals" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
@@ -36,7 +35,7 @@ class Header extends HTMLElement {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <div class="alert alert-primary" role="alert" style = "display:none" id = "saveAlert">
+                    <div class="alert alert-primary" role="alert" style="display:none" id = "saveAlert">
                       A simple primary alert—check it out!
                     </div>
                     Spending Goal:
@@ -53,10 +52,10 @@ class Header extends HTMLElement {
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary" onclick="saveButton()">Save changes</button>
-                    </div>
                   </div>
                 </div>
               </div>
+            </div>
         `;
     }
 }
