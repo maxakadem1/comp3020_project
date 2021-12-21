@@ -14,9 +14,38 @@ const ptMonthData = [10, 32, 22, 12, 30, 29, 20, 35, 16, 16, 15, 16, 14, 37, 32,
 const ptYearData = [253, 266, 176];
 
 // Spending Data
-const spendingWeekData = [84, 0, 0, 0, 87, 0, 0, 0, 27, 0, 0, 0, 40, 0, 0, 0, 65, 0, 0, 0, 56, 0, 0, 0, 99, 0, 0, 0, 0, 0, 0, 0, 94, 0, 0, 0, 47, 0, 0, 0, 99, 0, 0, 0, 99, 0, 0, 0, 12, 0, 0, 0, 19, 0, 0, 0, 7, 0, 0, 0, 37, 0, 0, 0, 77, 0, 0, 0, 27, 0, 0, 0, 39, 0, 0, 0, 67, 0, 0, 0, 7, 0, 0, 0, 54, 0, 0, 0, 38, 0, 0, 0, 60, 0, 0, 0, 78, 0, 0, 0, 68, 0, 0, 0, 91, 0, 0, 0, 93, 0, 0, 0, 18, 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 76, 0, 0, 0, 77, 0]
-const spendingMonthData = [84, 87, 27, 40, 65, 56, 99, 0, 94, 47, 99, 99, 12, 19, 7, 37, 77, 27, 39, 67, 7, 54, 38, 60, 78, 68, 91, 93, 18, 60, 0, 76, 77]
-const spendingYearData = [797, 444, 561]
+var spendingWeekData = JSON.parse(localStorage.getItem('spendingData'))
+var spendingMonthData = new Array(Math.ceil(spendingWeekData.length / 4))
+var spendingYearData = new Array(Math.ceil(spendingMonthData.length / 12))
+
+//Occupying Month and Year with 0's for calculation
+for(var i = 0; i < spendingMonthData.length; i++)
+{
+  spendingMonthData[i] = 0
+}
+for(var i = 0; i < spendingYearData.length; i++)
+{
+  spendingYearData[i] = 0
+}
+
+//Adding weeks in groups of 4 to get monthly totals
+for(var i = 0; i <spendingWeekData.length; i++)
+{
+  var monthPeriod = Math.floor(i/4)
+  spendingMonthData[monthPeriod] += spendingWeekData[i]
+}
+
+//Adding months in groups of 12 to get yearly totals
+for(var i = 0; i <spendingMonthData.length; i++)
+{
+  var yearPeriod = Math.floor(i/12)
+  spendingYearData[yearPeriod] += spendingMonthData[i]
+  console.log(spendingMonthData.length)
+}
+
+//const spendingWeekData = [84, 0, 0, 0, 87, 0, 0, 0, 27, 0, 0, 0, 40, 0, 0, 0, 65, 0, 0, 0, 56, 0, 0, 0, 99, 0, 0, 0, 0, 0, 0, 0, 94, 0, 0, 0, 47, 0, 0, 0, 99, 0, 0, 0, 99, 0, 0, 0, 12, 0, 0, 0, 19, 0, 0, 0, 7, 0, 0, 0, 37, 0, 0, 0, 77, 0, 0, 0, 27, 0, 0, 0, 39, 0, 0, 0, 67, 0, 0, 0, 7, 0, 0, 0, 54, 0, 0, 0, 38, 0, 0, 0, 60, 0, 0, 0, 78, 0, 0, 0, 68, 0, 0, 0, 91, 0, 0, 0, 93, 0, 0, 0, 18, 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 76, 0, 0, 0, 77, 0]
+//const spendingMonthData = [84, 87, 27, 40, 65, 56, 99, 0, 94, 47, 99, 99, 12, 19, 7, 37, 77, 27, 39, 67, 7, 54, 38, 60, 78, 68, 91, 93, 18, 60, 0, 76, 77]
+//const spendingYearData = [797, 444, 561]
 
 // Global Ranking Data
 
