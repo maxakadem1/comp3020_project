@@ -6,6 +6,14 @@ const title = 'Spending History'
 const xLabel = 'Week'
 const yLabel = 'Dollars Spent (CAD)'
 
+if(localStorage.getItem('spendingData') == null)
+{
+  localStorage.setItem('spendingData',JSON.stringify(spendingDefaultData))
+  console.log(localStorage.getItem('spendingData'));
+}
+
+
+
 // <block:setup:1>
 const data = {
     labels: defaultLabel,
@@ -13,7 +21,7 @@ const data = {
         label: '',
         backgroundColor: 'rgb(255, 99, 132, 0.7)',
         borderColor: 'rgb(255, 99, 132)',
-        data: spendingDefaultData
+        data: JSON.parse(localStorage.getItem('spendingData'))
     }]
 };
 // </block:setup>
