@@ -31,23 +31,6 @@
         <canvas id="myChart"></canvas>
     </div>
     <script src="../js/spending.js"></script>
-
-    <!--Edit spending data, data stored in localStorage-->
-    <h3> Edit Spending Data</h3>
-
-    <form>
-      <div class="form-group col-4">
-        <label>Week</label>
-        <input type="number" class="form-control" id="spendingWeekInput" placeholder="Enter Week Number">
-      </div>
-      <div class="form-group col-4">
-        <label for="exampleInputPassword1">Add or Remove Spending</label>
-        <input type="number" class="form-control" id="spendingNumberInput" placeholder="Spending in CAD" value = 0>
-      </div>
-      <br>
-      <button type = "button" id = "saveSpendingEdit" class="btn btn-primary" onclick="editSpending()">Submit</button>
-    </form>
-
 </div>
 
 <!-- Render -->
@@ -57,31 +40,6 @@
         configSpending
     );
 </script>
-
-<script>
-  function editSpending(){
-    var editedWeek = document.getElementById("spendingWeekInput").value
-    var currSpendingData = JSON.parse(localStorage.getItem('spendingData'))
-
-    //If the week number is out of the array, expand the array
-    while(editedWeek >= currSpendingData.length){
-      currSpendingData.push(0)
-    }
-
-    //If the week number is valid, edit the spending data
-    if(editedWeek >= 0){
-      currSpendingData[editedWeek] = JSON.parse(currSpendingData[editedWeek]) + JSON.parse(document.getElementById("spendingNumberInput").value)
-      if(currSpendingData[editedWeek] < 0){
-        currSpendingData[editedWeek] = 0
-      }
-
-      localStorage.setItem('spendingData', JSON.stringify(currSpendingData))
-    }
-  }
-</script>
-
-<!--Script for saving goals-->
-
 
 <!-- Javascript -->
 <script src="../js/chart-selector.js"></script>
