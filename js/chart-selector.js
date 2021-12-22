@@ -9,40 +9,63 @@ const monthLabels = [
 const yearLabels = ['2019', '2020', '2021'];
 
 // Playtime Data
-const ptWeekData = [3, 5, 2, 0, 9, 11, 4, 8, 1, 7, 10, 4, 3, 3, 5, 1, 8, 5, 11, 6, 3, 7, 10, 9, 4, 5, 7, 4, 11, 8, 5, 11, 1, 0, 5, 10, 7, 1, 6, 2, 0, 1, 6, 8, 3, 5, 5, 3, 1, 0, 6, 7, 11, 11, 4, 11, 11, 7, 10, 4, 5, 0, 2, 6, 4, 5, 8, 3, 2, 5, 4, 1, 1, 6, 4, 1, 4, 10, 6, 11, 2, 9, 3, 3, 6, 11, 4, 5, 5, 5, 11, 6, 6, 11, 1, 7, 9, 3, 2, 2, 6, 0, 7, 10, 1, 11, 1, 0, 10, 9, 5, 1, 4, 1, 3, 0, 5, 11, 9, 7, 11, 4, 1, 7, 3, 8, 10, 9, 5, 1]
-const ptMonthData = [10, 32, 22, 12, 30, 29, 20, 35, 16, 16, 15, 16, 14, 37, 32, 13, 20, 12, 12, 31, 17, 26, 27, 25, 16, 23, 13, 25, 8, 32, 23, 30, 6]
-const ptYearData = [253, 266, 176];
-
-// Spending Data
-var spendingWeekData = JSON.parse(localStorage.getItem('spendingData'))
-var spendingMonthData = new Array(Math.ceil(spendingWeekData.length / 4))
-var spendingYearData = new Array(Math.ceil(spendingMonthData.length / 12))
-
-//Occupying Month and Year with 0's for calculation
-for(var i = 0; i < spendingMonthData.length; i++)
+if(localStorage.getItem('playtimeData') != null)
 {
-  spendingMonthData[i] = 0
-}
-for(var i = 0; i < spendingYearData.length; i++)
-{
-  spendingYearData[i] = 0
-}
+  var ptWeekData = JSON.parse(localStorage.getItem('playtimeData'))
+  var ptMonthData = new Array(Math.ceil(ptWeekData.length / 4))
+  var ptYearData = new Array(Math.ceil(ptMonthData.length / 12))
 
-//Adding weeks in groups of 4 to get monthly totals
-for(var i = 0; i <spendingWeekData.length; i++)
-{
-  var monthPeriod = Math.floor(i/4)
-  spendingMonthData[monthPeriod] += spendingWeekData[i]
-}
+  //Occupying Month and Year with 0's for calculation
+  for(var i = 0; i < ptMonthData.length; i++){
+    ptMonthData[i] = 0
+  }
+  for(var i = 0; i < ptYearData.length; i++){
+    ptYearData[i] = 0
+  }
 
-//Adding months in groups of 12 to get yearly totals
-for(var i = 0; i <spendingMonthData.length; i++)
-{
-  var yearPeriod = Math.floor(i/12)
-  spendingYearData[yearPeriod] += spendingMonthData[i]
-  console.log(spendingMonthData.length)
-}
+  //Adding weeks in groups of 4 to get monthly totals
+  for(var i = 0; i <ptWeekData.length; i++){
+    var monthPeriod = Math.floor(i/4)
+    ptMonthData[monthPeriod] += ptWeekData[i]
+  }
 
+  //Adding months in groups of 12 to get yearly totals
+  for(var i = 0; i <ptMonthData.length; i++){
+    var yearPeriod = Math.floor(i/12)
+    ptYearData[yearPeriod] += ptMonthData[i]
+  }
+}
+//const ptWeekData = [3, 5, 2, 0, 9, 11, 4, 8, 1, 7, 10, 4, 3, 3, 5, 1, 8, 5, 11, 6, 3, 7, 10, 9, 4, 5, 7, 4, 11, 8, 5, 11, 1, 0, 5, 10, 7, 1, 6, 2, 0, 1, 6, 8, 3, 5, 5, 3, 1, 0, 6, 7, 11, 11, 4, 11, 11, 7, 10, 4, 5, 0, 2, 6, 4, 5, 8, 3, 2, 5, 4, 1, 1, 6, 4, 1, 4, 10, 6, 11, 2, 9, 3, 3, 6, 11, 4, 5, 5, 5, 11, 6, 6, 11, 1, 7, 9, 3, 2, 2, 6, 0, 7, 10, 1, 11, 1, 0, 10, 9, 5, 1, 4, 1, 3, 0, 5, 11, 9, 7, 11, 4, 1, 7, 3, 8, 10, 9, 5, 1]
+//const ptMonthData = [10, 32, 22, 12, 30, 29, 20, 35, 16, 16, 15, 16, 14, 37, 32, 13, 20, 12, 12, 31, 17, 26, 27, 25, 16, 23, 13, 25, 8, 32, 23, 30, 6]
+//const ptYearData = [253, 266, 176];
+
+if(localStorage.getItem('spendingData') != null)
+{
+  // Spending Data
+  var spendingWeekData = JSON.parse(localStorage.getItem('spendingData'))
+  var spendingMonthData = new Array(Math.ceil(spendingWeekData.length / 4))
+  var spendingYearData = new Array(Math.ceil(spendingMonthData.length / 12))
+
+  //Occupying Month and Year with 0's for calculation
+  for(var i = 0; i < spendingMonthData.length; i++){
+    spendingMonthData[i] = 0
+  }
+  for(var i = 0; i < spendingYearData.length; i++){
+    spendingYearData[i] = 0
+  }
+
+  //Adding weeks in groups of 4 to get monthly totals
+  for(var i = 0; i <spendingWeekData.length; i++){
+    var monthPeriod = Math.floor(i/4)
+    spendingMonthData[monthPeriod] += spendingWeekData[i]
+  }
+
+  //Adding months in groups of 12 to get yearly totals
+  for(var i = 0; i <spendingMonthData.length; i++){
+    var yearPeriod = Math.floor(i/12)
+    spendingYearData[yearPeriod] += spendingMonthData[i]
+  }
+}
 //const spendingWeekData = [84, 0, 0, 0, 87, 0, 0, 0, 27, 0, 0, 0, 40, 0, 0, 0, 65, 0, 0, 0, 56, 0, 0, 0, 99, 0, 0, 0, 0, 0, 0, 0, 94, 0, 0, 0, 47, 0, 0, 0, 99, 0, 0, 0, 99, 0, 0, 0, 12, 0, 0, 0, 19, 0, 0, 0, 7, 0, 0, 0, 37, 0, 0, 0, 77, 0, 0, 0, 27, 0, 0, 0, 39, 0, 0, 0, 67, 0, 0, 0, 7, 0, 0, 0, 54, 0, 0, 0, 38, 0, 0, 0, 60, 0, 0, 0, 78, 0, 0, 0, 68, 0, 0, 0, 91, 0, 0, 0, 93, 0, 0, 0, 18, 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 76, 0, 0, 0, 77, 0]
 //const spendingMonthData = [84, 87, 27, 40, 65, 56, 99, 0, 94, 47, 99, 99, 12, 19, 7, 37, 77, 27, 39, 67, 7, 54, 38, 60, 78, 68, 91, 93, 18, 60, 0, 76, 77]
 //const spendingYearData = [797, 444, 561]
@@ -64,15 +87,141 @@ function swapData(chart, labels, dataSet, xLabel) {
     chart.update();
 }
 
+function updateChart(chart, data)
+{
+  updateData()
+  weekData = JSON.parse(localStorage.getItem(data))
+  monthData = new Array(Math.ceil(weekData.length / 4))
+  yearData = new Array(Math.ceil(monthData.length / 12))
+  //Occupying Month and Year with 0's for calculation
+  for(var i = 0; i < monthData.length; i++){
+    monthData[i] = 0
+  }
+  for(var i = 0; i < yearData.length; i++){
+    yearData[i] = 0
+  }
+
+  //Adding weeks in groups of 4 to get monthly totals
+  for(var i = 0; i <weekData.length; i++){
+    var monthPeriod = Math.floor(i/4)
+    monthData[monthPeriod] += weekData[i]
+  }
+
+  //Adding months in groups of 12 to get yearly totals
+  for(var i = 0; i <monthData.length; i++){
+    var yearPeriod = Math.floor(i/12)
+    yearData[yearPeriod] += monthData[i]
+  }
+
+  //Update week chart
+  if(chart.config.options.scales.x.title.text == "Week"){
+    var newDataset = {
+        labels: weekLabels,
+        datasets: [{
+            backgroundColor: 'rgb(255, 99, 132, 0.7)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: weekData
+        }]
+    };
+    chart.config.data = newDataset;
+  }
+
+  //Update month chart
+  if(chart.config.options.scales.x.title.text == "Month"){
+    var newDataset = {
+        labels: monthLabels,
+        datasets: [{
+            backgroundColor: 'rgb(255, 99, 132, 0.7)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: monthData
+        }]
+    };
+    chart.config.data = newDataset;
+  }
+
+  //Update year chart
+  if(chart.config.options.scales.x.title.text == "Year"){
+    var newDataset = {
+        labels: yearLabels,
+        datasets: [{
+            backgroundColor: 'rgb(255, 99, 132, 0.7)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: yearData
+        }]
+    };
+    chart.config.data = newDataset;
+  }
+
+  //Disable animations only for updating chart
+  chart.config.options.animation = false
+  chart.update();
+  chart.config.options.animation = true
+}
+
+function updateData()
+{
+  //Updates the spending and playtime data from local storage
+  ptWeekData = JSON.parse(localStorage.getItem('playtimeData'))
+  ptMonthData = new Array(Math.ceil(ptWeekData.length / 4))
+  ptYearData = new Array(Math.ceil(ptMonthData.length / 12))
+
+  //Occupying Month and Year with 0's for calculation
+  for(var i = 0; i < ptMonthData.length; i++){
+    ptMonthData[i] = 0
+  }
+  for(var i = 0; i < ptYearData.length; i++){
+    ptYearData[i] = 0
+  }
+
+  //Adding weeks in groups of 4 to get monthly totals
+  for(var i = 0; i <ptWeekData.length; i++){
+    var monthPeriod = Math.floor(i/4)
+    ptMonthData[monthPeriod] += ptWeekData[i]
+  }
+
+  //Adding months in groups of 12 to get yearly totals
+  for(var i = 0; i <ptMonthData.length; i++){
+    var yearPeriod = Math.floor(i/12)
+    ptYearData[yearPeriod] += ptMonthData[i]
+  }
+
+  // Spending Data
+  spendingWeekData = JSON.parse(localStorage.getItem('spendingData'))
+  spendingMonthData = new Array(Math.ceil(spendingWeekData.length / 4))
+  spendingYearData = new Array(Math.ceil(spendingMonthData.length / 12))
+
+  //Occupying Month and Year with 0's for calculation
+  for(var i = 0; i < spendingMonthData.length; i++){
+    spendingMonthData[i] = 0
+  }
+  for(var i = 0; i < spendingYearData.length; i++){
+    spendingYearData[i] = 0
+  }
+
+  //Adding weeks in groups of 4 to get monthly totals
+  for(var i = 0; i <spendingWeekData.length; i++){
+    var monthPeriod = Math.floor(i/4)
+    spendingMonthData[monthPeriod] += spendingWeekData[i]
+  }
+
+  //Adding months in groups of 12 to get yearly totals
+  for(var i = 0; i <spendingMonthData.length; i++){
+    var yearPeriod = Math.floor(i/12)
+    spendingYearData[yearPeriod] += spendingMonthData[i]
+  }
+}
+
 if (document.getElementById("playtime-page")) {
     document.getElementById("week-btn").addEventListener("click", () => swapData(myChart, weekLabels, ptWeekData, 'Week'));
     document.getElementById("month-btn").addEventListener("click", () => swapData(myChart, monthLabels, ptMonthData, 'Month'));
     document.getElementById("year-btn").addEventListener("click", () => swapData(myChart, yearLabels, ptYearData, 'Year'));
+    document.getElementById("savePlaytimeEdit").addEventListener("click", () => updateChart(myChart, 'playtimeData'));
 }
 if (document.getElementById("spending-page")) {
     document.getElementById("spend-week-btn").addEventListener("click", () => swapData(myChart, weekLabels, spendingWeekData, 'Week'));
     document.getElementById("spend-month-btn").addEventListener("click", () => swapData(myChart, monthLabels, spendingMonthData, 'Month'));
     document.getElementById("spend-year-btn").addEventListener("click", () => swapData(myChart, yearLabels, spendingYearData, 'Year'));
+    document.getElementById("saveSpendingEdit").addEventListener("click", () => updateChart(myChart, 'spendingData'));
 }
 
 // if (document.getElementById(tags-page)) {

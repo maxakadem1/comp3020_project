@@ -34,6 +34,22 @@
         <canvas id="myChart"></canvas>
     </div>
     <script src="../js/playtime.js"></script>
+
+    <!--Edit spending data, data stored in localStorage-->
+    <h3> Edit Playtime Data</h3>
+
+    <form>
+      <div class="form-group col-4">
+        <label>Week</label>
+        <input type="number" class="form-control" id="playtimeWeekInput" placeholder="Enter Week Number">
+      </div>
+      <div class="form-group col-4">
+        <label for="exampleInputPassword1">Add or Remove Playtime</label>
+        <input type="number" class="form-control" id="playtimeNumberInput" placeholder="Spending in CAD" value = 0>
+      </div>
+      <br>
+      <button type = "button" id = "savePlaytimeEdit" class="btn btn-primary" onclick="editPlaytime()">Submit</button>
+    </form>
 </div>
 
 <!-- Render -->
@@ -43,6 +59,30 @@
         config
     );
 </script>
+
+<script>
+  function editPlaytime(){
+    var editedWeek = document.getElementById("playtimeWeekInput").value
+    var currPlaytimeData = JSON.parse(localStorage.getItem('playtimeData'))
+
+    //If the week number is out of the array, expand the array
+    while(editedWeek >= currPlaytimeData.length){
+      currPlaytimeData.push(0)
+    }
+
+    //If the week number is valid, edit the spending data
+    if(editedWeek >= 0){
+      currPlaytimeData[editedWeek] = JSON.parse(currPlaytimeData[editedWeek]) + JSON.parse(document.getElementById("playtimeNumberInput").value)
+      if(currPlaytimeData[editedWeek] < 0){
+        currPlaytimeData[editedWeek] = 0
+      }
+
+      localStorage.setItem('playtimeData', JSON.stringify(currPlaytimeData))
+    }
+  }
+</script>
+
+
 
 <!-- Javascript -->
 <script src="../js/chart-selector.js"></script>

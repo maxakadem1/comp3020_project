@@ -5,6 +5,12 @@ const title = 'Playtime History'
 const xLabel = 'Month'
 const yLabel = 'Time (hr)'
 
+if(localStorage.getItem('playtimeData') == null)
+{
+  localStorage.setItem('playtimeData',JSON.stringify(playtimeDefaultData))
+  console.log(localStorage.getItem('playtimeData'));
+}
+
 // <block:setup:1>
 const data = {
     labels: playtimeDefaultLabel,
@@ -12,7 +18,7 @@ const data = {
         label: '',
         backgroundColor: 'rgb(255, 99, 132, 0.7)',
         borderColor: 'rgb(255, 99, 132)',
-        data: playtimeDefaultData
+        data: JSON.parse(localStorage.getItem('playtimeData'))
     }]
 };
 // </block:setup>
