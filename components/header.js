@@ -38,7 +38,7 @@ class Header extends HTMLElement {
                   <div class="modal-body">
                     Spending Goal:
                     <div class="progress" style="height: 30px";>
-                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">10$ / 40$</div>
+                      <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id = "spendingGoalProgressBar"><p id = "spendingGoalText"></p></div>
                     </div>
                     <h6>Goal Period</h6>
                     <div class = "form-group row">
@@ -61,7 +61,7 @@ class Header extends HTMLElement {
 
                     Playtime Goal:
                     <div class="progress" style="height: 30px";>
-                      <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">12 hrs /20 hrs</div>
+                      <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id = "ptGoalProgressBar"><p id = "ptGoalText"></p></div>
                     </div>
                     <h6>Goal Period</h6>
                     <div class = "form-group row">
