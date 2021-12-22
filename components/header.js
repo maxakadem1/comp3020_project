@@ -39,7 +39,8 @@ class Header extends HTMLElement {
                     <div class="progress" style="height: 30px";>
                       <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id = "spendingGoalProgressBar"><p id = "spendingGoalText"></p></div>
                     </div>
-                    <h6>Goal Period</h6>
+                    <br>
+                    <h6>Set your Goal</h6>
                     <div class = "form-group row">
                       <div class = "col-2">
                         <label>Starting Week</label>
@@ -62,7 +63,8 @@ class Header extends HTMLElement {
                     <div class="progress" style="height: 30px";>
                       <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id = "ptGoalProgressBar"><p id = "ptGoalText"></p></div>
                     </div>
-                    <h6>Goal Period</h6>
+                    <br>
+                    <h6>Set your Goal</h6>
                     <div class = "form-group row">
                       <div class = "col-2">
                         <label>Starting Week</label>
