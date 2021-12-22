@@ -27,7 +27,6 @@ class Header extends HTMLElement {
                 </nav>
             </div>
 
-
             <div class="modal fade" id="goalsModal" tabindex="-1" aria-labelledby="Goals" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">

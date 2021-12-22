@@ -3,7 +3,7 @@ const weekLabels = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'
     '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85', '86', '87', '88', '89', '90', '91', '92', '93', '94', '95', '96', '97', '98', '99', '100', '101', '102', '103',
     '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114', '115', '116', '117', '118', '119', '120', '121', '122', '123', '124', '125', '126', '127', '128', '129']
 const monthLabels = [
-    'Jan \'19', 'Feb\'19', 'Mar \'19', 'Apr \'19', 'May \'19', 'Jun \'19', 'Jul\'19', 'Aug \'19', 'Sep \'19' , 'Oct \'19', 'Nov \'19', 'Dec \'19',
+    'Jan \'19', 'Feb\'19', 'Mar \'19', 'Apr \'19', 'May \'19', 'Jun \'19', 'Jul\'19', 'Aug \'19', 'Sep \'19', 'Oct \'19', 'Nov \'19', 'Dec \'19',
     'Jan \'20', 'Feb \'20', 'Mar \'20', 'Apr \'20', 'May \'20', 'Jun \'20', 'Jul \'20', 'Aug \'20', 'Sep \'20', 'Oct \'20', 'Nov \'20', 'Dec \'20',
     'Jan \'21', 'Feb \'21', 'Mar \'21', 'Apr \'21', 'May \'21', 'Jun \'21']
 const yearLabels = ['2019', '2020', '2021'];
@@ -87,144 +87,52 @@ function swapData(chart, labels, dataSet, xLabel) {
     chart.update();
 }
 
-function updateChart(chart, data)
-{
-  updateData()
-  weekData = JSON.parse(localStorage.getItem(data))
-  monthData = new Array(Math.ceil(weekData.length / 4))
-  yearData = new Array(Math.ceil(monthData.length / 12))
-  //Occupying Month and Year with 0's for calculation
-  for(var i = 0; i < monthData.length; i++){
-    monthData[i] = 0
-  }
-  for(var i = 0; i < yearData.length; i++){
-    yearData[i] = 0
-  }
-
-  //Adding weeks in groups of 4 to get monthly totals
-  for(var i = 0; i <weekData.length; i++){
-    var monthPeriod = Math.floor(i/4)
-    monthData[monthPeriod] += weekData[i]
-  }
-
-  //Adding months in groups of 12 to get yearly totals
-  for(var i = 0; i <monthData.length; i++){
-    var yearPeriod = Math.floor(i/12)
-    yearData[yearPeriod] += monthData[i]
-  }
-
-  //Update week chart
-  if(chart.config.options.scales.x.title.text == "Week"){
-    var newDataset = {
-        labels: weekLabels,
+function swapGloablData(chart, labels, userDataSet, globalDataSet, xLabel) {
+    const newDataset = {
+        labels: labels,
         datasets: [{
+            label: 'User',
             backgroundColor: 'rgb(255, 99, 132, 0.7)',
             borderColor: 'rgb(255, 99, 132)',
-            data: weekData
+            data: userDataSet
+        }, {
+            label: 'Global Users',
+            backgroundColor: 'rgba(54, 162, 235, 0.7)',
+            borderColor: 'rgb(54, 162, 235)',
+            data: globalDataSet
         }]
     };
+
     chart.config.data = newDataset;
-  }
-
-  //Update month chart
-  if(chart.config.options.scales.x.title.text == "Month"){
-    var newDataset = {
-        labels: monthLabels,
-        datasets: [{
-            backgroundColor: 'rgb(255, 99, 132, 0.7)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: monthData
-        }]
-    };
-    chart.config.data = newDataset;
-  }
-
-  //Update year chart
-  if(chart.config.options.scales.x.title.text == "Year"){
-    var newDataset = {
-        labels: yearLabels,
-        datasets: [{
-            backgroundColor: 'rgb(255, 99, 132, 0.7)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: yearData
-        }]
-    };
-    chart.config.data = newDataset;
-  }
-
-  //Disable animations only for updating chart
-  chart.config.options.animation = false
-  chart.update();
-  chart.config.options.animation = true
-}
-
-function updateData()
-{
-  //Updates the spending and playtime data from local storage
-  ptWeekData = JSON.parse(localStorage.getItem('playtimeData'))
-  ptMonthData = new Array(Math.ceil(ptWeekData.length / 4))
-  ptYearData = new Array(Math.ceil(ptMonthData.length / 12))
-
-  //Occupying Month and Year with 0's for calculation
-  for(var i = 0; i < ptMonthData.length; i++){
-    ptMonthData[i] = 0
-  }
-  for(var i = 0; i < ptYearData.length; i++){
-    ptYearData[i] = 0
-  }
-
-  //Adding weeks in groups of 4 to get monthly totals
-  for(var i = 0; i <ptWeekData.length; i++){
-    var monthPeriod = Math.floor(i/4)
-    ptMonthData[monthPeriod] += ptWeekData[i]
-  }
-
-  //Adding months in groups of 12 to get yearly totals
-  for(var i = 0; i <ptMonthData.length; i++){
-    var yearPeriod = Math.floor(i/12)
-    ptYearData[yearPeriod] += ptMonthData[i]
-  }
-
-  // Spending Data
-  spendingWeekData = JSON.parse(localStorage.getItem('spendingData'))
-  spendingMonthData = new Array(Math.ceil(spendingWeekData.length / 4))
-  spendingYearData = new Array(Math.ceil(spendingMonthData.length / 12))
-
-  //Occupying Month and Year with 0's for calculation
-  for(var i = 0; i < spendingMonthData.length; i++){
-    spendingMonthData[i] = 0
-  }
-  for(var i = 0; i < spendingYearData.length; i++){
-    spendingYearData[i] = 0
-  }
-
-  //Adding weeks in groups of 4 to get monthly totals
-  for(var i = 0; i <spendingWeekData.length; i++){
-    var monthPeriod = Math.floor(i/4)
-    spendingMonthData[monthPeriod] += spendingWeekData[i]
-  }
-
-  //Adding months in groups of 12 to get yearly totals
-  for(var i = 0; i <spendingMonthData.length; i++){
-    var yearPeriod = Math.floor(i/12)
-    spendingYearData[yearPeriod] += spendingMonthData[i]
-  }
+    chart.config.options.scales.x.title.text = xLabel;
+    chart.update();
 }
 
 if (document.getElementById("playtime-page")) {
-    document.getElementById("week-btn").addEventListener("click", () => swapData(myChart, weekLabels, ptWeekData, 'Week'));
-    document.getElementById("month-btn").addEventListener("click", () => swapData(myChart, monthLabels, ptMonthData, 'Month'));
-    document.getElementById("year-btn").addEventListener("click", () => swapData(myChart, yearLabels, ptYearData, 'Year'));
-    document.getElementById("savePlaytimeEdit").addEventListener("click", () => updateChart(myChart, 'playtimeData'));
-}
-if (document.getElementById("spending-page")) {
-    document.getElementById("spend-week-btn").addEventListener("click", () => swapData(myChart, weekLabels, spendingWeekData, 'Week'));
-    document.getElementById("spend-month-btn").addEventListener("click", () => swapData(myChart, monthLabels, spendingMonthData, 'Month'));
-    document.getElementById("spend-year-btn").addEventListener("click", () => swapData(myChart, yearLabels, spendingYearData, 'Year'));
-    document.getElementById("saveSpendingEdit").addEventListener("click", () => updateChart(myChart, 'spendingData'));
+    if (document.getElementById("global-page")) {
+        document.getElementById("week-btn").addEventListener("click", () => swapGloablData(playTimeChart, weekLabels, ptWeekData, ptGlobalWeek, 'Week'));
+        document.getElementById("month-btn").addEventListener("click", () => swapGloablData(playTimeChart, monthLabels, ptMonthData, 'Month'));
+        document.getElementById("year-btn").addEventListener("click", () => swapGloablData(playTimeChart, yearLabels, ptYearData, 'Year'));
+    } else {
+        document.getElementById("week-btn").addEventListener("click", () => swapData(playTimeChart, weekLabels, ptWeekData, 'Week'));
+        document.getElementById("month-btn").addEventListener("click", () => swapData(playTimeChart, monthLabels, ptMonthData, 'Month'));
+        document.getElementById("year-btn").addEventListener("click", () => swapData(playTimeChart, yearLabels, ptYearData, 'Year'));
+    }
 }
 
-// if (document.getElementById(tags-page)) {
+if (document.getElementById("spending-page")) {
+    console.log('debug print - spending page buttons')
+
+    document.getElementById("spend-week-btn").addEventListener("click", () => swapData(spendingChart, weekLabels, spendingWeekData, 'Week'));
+    document.getElementById("spend-month-btn").addEventListener("click", () => swapData(spendingChart, monthLabels, spendingMonthData, 'Month'));
+    document.getElementById("spend-year-btn").addEventListener("click", () => swapData(spendingChart, yearLabels, spendingYearData, 'Year'));
+
+}
+if (document.getElementById("global-page") && document.getElementById("spending-page")) {
+    document.getElementById("spend-week-btn").addEventListener("click", () => swapGloablData(spendingChart, weekLabels, ptWeekData, spendingGlobalWeek, 'Week'));
+    document.getElementById("spend-month-btn").addEventListener("click", () => swapGloablData(spendingChart, monthLabels, ptMonthData, 'Month'));
+    document.getElementById("spend-year-btn").addEventListener("click", () => swapGloablData(spendingChart, yearLabels, ptYearData, 'Year'));
+}
 
 
 // function showPlaytime() {
