@@ -116,4 +116,5 @@ function emptyFields()
   document.getElementById('ptStartWeek').value = ''
   document.getElementById('ptEndWeek').value = ''
   document.getElementById('ptGoalNumber').value = ''
+  document.getElementById('goalSaveMessage').innerHTML = ''
 }
