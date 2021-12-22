@@ -1,4 +1,4 @@
-class TimelineButtons extends HTMLElement {
+class PlaytimeButtons extends HTMLElement {
     constructor() {
         super();
     }
@@ -16,4 +16,4 @@ class TimelineButtons extends HTMLElement {
     }
 }
 
-customElements.define('timeline-buttons-component', TimelineButtons);
+customElements.define('playtime-buttons-component', PlaytimeButtons);
