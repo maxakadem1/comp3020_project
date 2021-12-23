@@ -42,18 +42,18 @@ class Header extends HTMLElement {
                     <br>
                     <h6>Set your Goal</h6>
                     <div class = "form-group row">
-                      <div class = "col-2">
+                      <div class = "col-3">
                         <label>Starting Week</label>
                         <input type="number" class="form-control" id="spendingStartWeek">
                       </div>
 
-                      <div class = "col-2">
-                        <label>Ending Week</label>
-                        <input type="number" class="form-control" id="spendingEndWeek">
+                      <div class = "col-3">
+                        <label>Goal Length (Weeks)</label>
+                        <input type="number" class="form-control" id="spendingSpan">
                       </div>
 
                       <div class = "col-2">
-                        <label>Goal</label>
+                        <label>Goal ($)</label>
                         <input type="number" class="form-control" id="spendingGoalNumber">
                       </div>
                     </div>
@@ -73,7 +73,7 @@ class Header extends HTMLElement {
 
                       <div class = "col-2">
                         <label>Ending Week</label>
-                        <input type="number" class="form-control" id="ptEndWeek">
+                        <input type="number" class="form-control" id="ptSpan">
                       </div>
 
                       <div class = "col-2">
