@@ -31,11 +31,11 @@ class Header extends HTMLElement {
               <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Goals</h5>
+                    <h4 class="modal-title" id="exampleModalLabel">Goals</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    Spending Goal:
+                    <h5>Spending Goal:</h5>
                     <div class="progress" style="height: 30px";>
                       <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id = "spendingGoalProgressBar"><p id = "spendingGoalText"></p></div>
                     </div>
@@ -59,7 +59,7 @@ class Header extends HTMLElement {
                     </div>
                     <br>
                     <p id = 'spendingGoalDescription'></p>
-                    Playtime Goal:
+                    <h5>Playtime Goal:</h5>
                     <div class="progress" style="height: 30px";>
                       <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id = "ptGoalProgressBar"><p id = "ptGoalText"></p></div>
                     </div>
