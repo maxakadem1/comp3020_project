@@ -19,7 +19,7 @@ class Header extends HTMLElement {
                             <li><a href="spending.html" class="nav-link">Spending</a></li>
                             <li><a href="globalRanking.html" class="nav-link">Global Rankings</a></li>
                             <li><a href="tags.html" class="nav-link">Favourite Tags</a></li>
-                            <li><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#goalsModal">Goals</a></li>
+                            <li><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#goalsModal" onclick='fetchFields()'>Goals</a></li>
                             <li><a href="#" class="nav-link">Library</a></li>
                             <li> <a href="../signin/signin.html" class="nav-link">Log In</a></li>
                         </ul>
@@ -31,31 +31,70 @@ class Header extends HTMLElement {
               <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Goals</h5>
+                    <h4 class="modal-title" id="exampleModalLabel">Goals</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <div class="alert alert-primary" role="alert" style="display:none" id = "saveAlert">
-                      A simple primary alert—check it out!
-                    </div>
-                    Spending Goal:
+                    <h5>Spending Goal:</h5>
                     <div class="progress" style="height: 30px";>
-                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">10$ / 40$</div>
+                      <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id = "spendingGoalProgressBar"><p id = "spendingGoalText"></p></div>
                     </div>
                     <br>
-                    Playtime Goal:
-                    <div class="progress" style="height: 30px";>
-                      <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">12 hrs /20 hrs</div>
+                    <h6>Set your Goal</h6>
+                    <div class = "form-group row">
+                      <div class = "col-3">
+                        <label>Starting Week</label>
+                        <input type="number" class="form-control" id="spendingStartWeek">
+                      </div>
+
+                      <div class = "col-3">
+                        <label>Goal Length (Weeks)</label>
+                        <input type="number" class="form-control" id="spendingSpan">
+                      </div>
+
+                      <div class = "col-2">
+                        <label>Goal ($)</label>
+                        <input type="number" class="form-control" id="spendingGoalNumber">
+                      </div>
                     </div>
+                    <br>
+                    <p id = 'spendingGoalDescription'></p>
+                    <h5>Playtime Goal:</h5>
+                    <div class="progress" style="height: 30px";>
+                      <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id = "ptGoalProgressBar"><p id = "ptGoalText"></p></div>
+                    </div>
+                    <br>
+                    <h6>Set your Goal</h6>
+                    <div class = "form-group row">
+                      <div class = "col-3">
+                        <label>Starting Week</label>
+                        <input type="number" class="form-control" id="ptStartWeek">
+                      </div>
+
+                      <div class = "col-3">
+                        <label>Goal Length (Weeks)</label>
+                        <input type="number" class="form-control" id="ptSpan">
+                      </div>
+
+                      <div class = "col-2">
+                        <label>Goal (Hours)</label>
+                        <input type="number" class="form-control" id="ptGoalNumber">
+                      </div>
+                    </div>
+                    <br>
+                    <p id = 'ptGoalDescription'></p>
+
 
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="saveButton()">Save changes</button>
+                    <p id = "goalSaveMessage"></p>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="emptyFields()">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="goalSave()">Save changes</button>
                   </div>
                 </div>
               </div>
             </div>
+
         `;
     }
 }
