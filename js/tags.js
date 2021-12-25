@@ -24,7 +24,7 @@ const data = {
     datasets: [{
         label: 'Play Time',
         backgroundColor: bgColours,
-        // borderColor: borderColours,
+        borderColor: borderColours,
         hoverOffset: 4,
         data: tagData
     }]
@@ -41,7 +41,7 @@ const config = {
                 display: true,
                 text: 'Favourite Tags'
             }
-        }
+        },
     }
 };
 // </block:config>

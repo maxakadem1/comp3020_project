@@ -8,63 +8,87 @@ const monthLabels = [
     'Jan \'21', 'Feb \'21', 'Mar \'21', 'Apr \'21', 'May \'21', 'Jun \'21']
 const yearLabels = ['2019', '2020', '2021'];
 
+const ptWeekData = JSON.parse(localStorage.getItem('playtimeData'));
+const ptMonthData = new Array(Math.ceil(ptWeekData.length / 4));
+const ptYearData = new Array(Math.ceil(ptMonthData.length / 12));
+
+const ptWeekData2 = JSON.parse(localStorage.getItem('playtimeData2'));
+const ptMonthData2 = new Array(Math.ceil(ptWeekData2.length / 4));
+const ptYearData2 = new Array(Math.ceil(ptMonthData2.length / 12));
+
 // Playtime Data
-if(localStorage.getItem('playtimeData') != null)
-{
-  var ptWeekData = JSON.parse(localStorage.getItem('playtimeData'))
-  var ptMonthData = new Array(Math.ceil(ptWeekData.length / 4))
-  var ptYearData = new Array(Math.ceil(ptMonthData.length / 12))
+if (localStorage.getItem('playtimeData') != null) {
+    //Occupying Month and Year with 0's for calculation
+    for (var i = 0; i < ptMonthData.length; i++) {
+        ptMonthData[i] = 0
+    }
+    for (var i = 0; i < ptYearData.length; i++) {
+        ptYearData[i] = 0
+    }
 
-  //Occupying Month and Year with 0's for calculation
-  for(var i = 0; i < ptMonthData.length; i++){
-    ptMonthData[i] = 0
-  }
-  for(var i = 0; i < ptYearData.length; i++){
-    ptYearData[i] = 0
-  }
+    //Adding weeks in groups of 4 to get monthly totals
+    for (var i = 0; i < ptWeekData.length; i++) {
+        var monthPeriod = Math.floor(i / 4)
+        ptMonthData[monthPeriod] += ptWeekData[i]
+    }
 
-  //Adding weeks in groups of 4 to get monthly totals
-  for(var i = 0; i <ptWeekData.length; i++){
-    var monthPeriod = Math.floor(i/4)
-    ptMonthData[monthPeriod] += ptWeekData[i]
-  }
+    //Adding months in groups of 12 to get yearly totals
+    for (var i = 0; i < ptMonthData.length; i++) {
+        var yearPeriod = Math.floor(i / 12)
+        ptYearData[yearPeriod] += ptMonthData[i]
+    }
+}
+// playtime dataset2
+if (localStorage.getItem('playtimeData2') != null) {
+    //Occupying Month and Year with 0's for calculation
+    for (var i = 0; i < ptMonthData2.length; i++) {
+        ptMonthData2[i] = 0
+    }
+    for (var i = 0; i < ptYearData2.length; i++) {
+        ptYearData2[i] = 0
+    }
 
-  //Adding months in groups of 12 to get yearly totals
-  for(var i = 0; i <ptMonthData.length; i++){
-    var yearPeriod = Math.floor(i/12)
-    ptYearData[yearPeriod] += ptMonthData[i]
-  }
+    //Adding weeks in groups of 4 to get monthly totals
+    for (var i = 0; i < ptWeekData2.length; i++) {
+        var monthPeriod = Math.floor(i / 4)
+        ptMonthData2[monthPeriod] += ptWeekData2[i]
+    }
+
+    //Adding months in groups of 12 to get yearly totals
+    for (var i = 0; i < ptMonthData2.length; i++) {
+        var yearPeriod = Math.floor(i / 12)
+        ptYearData2[yearPeriod] += ptMonthData2[i]
+    }
 }
 //const ptWeekData = [3, 5, 2, 0, 9, 11, 4, 8, 1, 7, 10, 4, 3, 3, 5, 1, 8, 5, 11, 6, 3, 7, 10, 9, 4, 5, 7, 4, 11, 8, 5, 11, 1, 0, 5, 10, 7, 1, 6, 2, 0, 1, 6, 8, 3, 5, 5, 3, 1, 0, 6, 7, 11, 11, 4, 11, 11, 7, 10, 4, 5, 0, 2, 6, 4, 5, 8, 3, 2, 5, 4, 1, 1, 6, 4, 1, 4, 10, 6, 11, 2, 9, 3, 3, 6, 11, 4, 5, 5, 5, 11, 6, 6, 11, 1, 7, 9, 3, 2, 2, 6, 0, 7, 10, 1, 11, 1, 0, 10, 9, 5, 1, 4, 1, 3, 0, 5, 11, 9, 7, 11, 4, 1, 7, 3, 8, 10, 9, 5, 1]
 //const ptMonthData = [10, 32, 22, 12, 30, 29, 20, 35, 16, 16, 15, 16, 14, 37, 32, 13, 20, 12, 12, 31, 17, 26, 27, 25, 16, 23, 13, 25, 8, 32, 23, 30, 6]
+
+// Spending Data
+const spendingWeekData = JSON.parse(localStorage.getItem('spendingData'));
+const spendingMonthData = new Array(Math.ceil(spendingWeekData.length / 4));
+const spendingYearData = new Array(Math.ceil(spendingMonthData.length / 12));
 //const ptYearData = [253, 266, 176];
 
-if(localStorage.getItem('spendingData') != null)
-{
-  // Spending Data
-  var spendingWeekData = JSON.parse(localStorage.getItem('spendingData'))
-  var spendingMonthData = new Array(Math.ceil(spendingWeekData.length / 4))
-  var spendingYearData = new Array(Math.ceil(spendingMonthData.length / 12))
+if (localStorage.getItem('spendingData') != null) {
+    //Occupying Month and Year with 0's for calculation
+    for (var i = 0; i < spendingMonthData.length; i++) {
+        spendingMonthData[i] = 0
+    }
+    for (var i = 0; i < spendingYearData.length; i++) {
+        spendingYearData[i] = 0
+    }
 
-  //Occupying Month and Year with 0's for calculation
-  for(var i = 0; i < spendingMonthData.length; i++){
-    spendingMonthData[i] = 0
-  }
-  for(var i = 0; i < spendingYearData.length; i++){
-    spendingYearData[i] = 0
-  }
+    //Adding weeks in groups of 4 to get monthly totals
+    for (var i = 0; i < spendingWeekData.length; i++) {
+        var monthPeriod = Math.floor(i / 4)
+        spendingMonthData[monthPeriod] += spendingWeekData[i]
+    }
 
-  //Adding weeks in groups of 4 to get monthly totals
-  for(var i = 0; i <spendingWeekData.length; i++){
-    var monthPeriod = Math.floor(i/4)
-    spendingMonthData[monthPeriod] += spendingWeekData[i]
-  }
-
-  //Adding months in groups of 12 to get yearly totals
-  for(var i = 0; i <spendingMonthData.length; i++){
-    var yearPeriod = Math.floor(i/12)
-    spendingYearData[yearPeriod] += spendingMonthData[i]
-  }
+    //Adding months in groups of 12 to get yearly totals
+    for (var i = 0; i < spendingMonthData.length; i++) {
+        var yearPeriod = Math.floor(i / 12)
+        spendingYearData[yearPeriod] += spendingMonthData[i]
+    }
 }
 //const spendingWeekData = [84, 0, 0, 0, 87, 0, 0, 0, 27, 0, 0, 0, 40, 0, 0, 0, 65, 0, 0, 0, 56, 0, 0, 0, 99, 0, 0, 0, 0, 0, 0, 0, 94, 0, 0, 0, 47, 0, 0, 0, 99, 0, 0, 0, 99, 0, 0, 0, 12, 0, 0, 0, 19, 0, 0, 0, 7, 0, 0, 0, 37, 0, 0, 0, 77, 0, 0, 0, 27, 0, 0, 0, 39, 0, 0, 0, 67, 0, 0, 0, 7, 0, 0, 0, 54, 0, 0, 0, 38, 0, 0, 0, 60, 0, 0, 0, 78, 0, 0, 0, 68, 0, 0, 0, 91, 0, 0, 0, 93, 0, 0, 0, 18, 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 76, 0, 0, 0, 77, 0]
 //const spendingMonthData = [84, 87, 27, 40, 65, 56, 99, 0, 94, 47, 99, 99, 12, 19, 7, 37, 77, 27, 39, 67, 7, 54, 38, 60, 78, 68, 91, 93, 18, 60, 0, 76, 77]
@@ -72,13 +96,17 @@ if(localStorage.getItem('spendingData') != null)
 
 // Global Ranking Data
 
-function swapData(chart, labels, dataSet, xLabel) {
+function swapData(chart, labels, dataSet, dataset2, xLabel) {
     const newDataset = {
         labels: labels,
         datasets: [{
             backgroundColor: 'rgb(255, 99, 132, 0.7)',
             borderColor: 'rgb(255, 99, 132)',
             data: dataSet
+        }, {
+            backgroundColor: 'rgb(54, 162, 235, 0.7)',
+            borderColor: 'rgb(54, 162, 235)',
+            data: dataset2
         }]
     };
 
@@ -114,9 +142,9 @@ if (document.getElementById("playtime-page")) {
         document.getElementById("month-btn").addEventListener("click", () => swapGlobalData(playTimeChart, monthLabels, ptMonthData, 'Month'));
         document.getElementById("year-btn").addEventListener("click", () => swapGlobalData(playTimeChart, yearLabels, ptYearData, 'Year'));
     } else {
-        document.getElementById("week-btn").addEventListener("click", () => swapData(playTimeChart, weekLabels, ptWeekData, 'Week'));
-        document.getElementById("month-btn").addEventListener("click", () => swapData(playTimeChart, monthLabels, ptMonthData, 'Month'));
-        document.getElementById("year-btn").addEventListener("click", () => swapData(playTimeChart, yearLabels, ptYearData, 'Year'));
+        document.getElementById("week-btn").addEventListener("click", () => swapData(playTimeChart, weekLabels, ptWeekData, ptWeekData2, 'Week'));
+        document.getElementById("month-btn").addEventListener("click", () => swapData(playTimeChart, monthLabels, ptMonthData, ptMonthData2, 'Month'));
+        document.getElementById("year-btn").addEventListener("click", () => swapData(playTimeChart, yearLabels, ptYearData, ptYearData2, 'Year'));
     }
 }
 
