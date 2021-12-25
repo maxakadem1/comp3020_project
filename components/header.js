@@ -58,7 +58,7 @@ class Header extends HTMLElement {
                       </div>
                     </div>
                     <br>
-
+                    <p id = 'spendingGoalDescription'></p>
                     Playtime Goal:
                     <div class="progress" style="height: 30px";>
                       <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id = "ptGoalProgressBar"><p id = "ptGoalText"></p></div>
@@ -66,23 +66,23 @@ class Header extends HTMLElement {
                     <br>
                     <h6>Set your Goal</h6>
                     <div class = "form-group row">
-                      <div class = "col-2">
+                      <div class = "col-3">
                         <label>Starting Week</label>
                         <input type="number" class="form-control" id="ptStartWeek">
                       </div>
 
-                      <div class = "col-2">
-                        <label>Ending Week</label>
+                      <div class = "col-3">
+                        <label>Goal Length (Weeks)</label>
                         <input type="number" class="form-control" id="ptSpan">
                       </div>
 
                       <div class = "col-2">
-                        <label>Goal</label>
+                        <label>Goal (Hours)</label>
                         <input type="number" class="form-control" id="ptGoalNumber">
                       </div>
-
                     </div>
                     <br>
+                    <p id = 'ptGoalDescription'></p>
 
 
                   </div>

@@ -6,7 +6,7 @@ function fetchFields()
   var currSpendingData = JSON.parse(localStorage.getItem('spendingData'))
 
   if(localStorage.getItem('spendingStartWeekSaved') == null){
-    localStorage.setItem('spendingStartWeekSaved',currSpendingData.length)
+    localStorage.setItem('spendingStartWeekSaved',currSpendingData.length - 1)
   }
 
   if(localStorage.getItem('spendingSpanSaved') == null){
@@ -19,7 +19,7 @@ function fetchFields()
 
   //Set playtime goal range default values to 0 and 0
   if(localStorage.getItem('ptStartWeekSaved') == null){
-    localStorage.setItem('ptStartWeekSaved',0)
+    localStorage.setItem('ptStartWeekSaved',currSpendingData.length - 1)
   }
 
   if(localStorage.getItem('ptSpanSaved') == null){
@@ -64,7 +64,7 @@ function fetchFields()
 
   for(var i = 0; i <= spendingPeriod; i++)
   {
-    if(JSON.parse(document.getElementById('spendingStartWeek').value + i <= currSpendingData.length))
+    if(JSON.parse(document.getElementById('spendingStartWeek').value) + i < currSpendingData.length)
     {
       spendingTotal += currSpendingData[JSON.parse(document.getElementById('spendingStartWeek').value) + i]
     }
@@ -73,26 +73,33 @@ function fetchFields()
   document.getElementById("spendingGoalText").innerHTML = spendingBarPercent.toFixed(2) + "%"
   document.getElementById("spendingGoalProgressBar").style.width = spendingBarPercent + "%"
 
+
   //Fill playtime progress
   var ptTotal = 0
-  var ptPeriod = JSON.parse(document.getElementById('ptSpan').value) - JSON.parse(document.getElementById('ptStartWeek').value)
+  var ptPeriod = JSON.parse(document.getElementById('ptSpan').value)
   var currPtData = JSON.parse(localStorage.getItem('playtimeData'))
 
   for(var i = 0; i < ptPeriod; i++)
   {
-    ptTotal += currPtData[JSON.parse(document.getElementById('ptStartWeek').value) + i]
+    if(JSON.parse(document.getElementById('ptStartWeek').value) + i < currSpendingData.length)
+    {
+      ptTotal += currPtData[JSON.parse(document.getElementById('ptStartWeek').value) + i]
+    }
   }
   var ptBarPercent = (ptTotal*1.0 / document.getElementById('ptGoalNumber').value) * 100
   document.getElementById("ptGoalText").innerHTML = ptBarPercent.toFixed(2) + "%"
   document.getElementById("ptGoalProgressBar").style.width = ptBarPercent + "%"
+
+  createMessage(spendingTotal, ptTotal)
 }
 
 //Save goal
 function goalSave(){
+  clearSaveMessage()
   //If the starting and ending week are not null, ant if the starting week is less than or equal to the ending week, save
   var currSpendingData = JSON.parse(localStorage.getItem('spendingData'))
-  var spendingStartValid = new Boolean(document.getElementById('spendingStartWeek') != null && document.getElementById('spendingStartWeek').value >= 0 && document.getElementById('spendingStartWeek').value < currSpendingData.length)
-  var ptStartValid = document.getElementById('ptStartWeek') != null && document.getElementById('ptStartWeek').value >= 0 && document.getElementById('ptStartWeek').value < currSpendingData.length
+  var spendingStartValid = document.getElementById('spendingStartWeek') != null && document.getElementById('spendingStartWeek').value >= 0
+  var ptStartValid = document.getElementById('ptStartWeek') != null && document.getElementById('ptStartWeek').value >= 0
   var spendingGoalValid = document.getElementById('spendingGoalNumber') != null && document.getElementById('spendingGoalNumber').value > 0
   var ptGoalValid = document.getElementById('ptGoalNumber') != null && document.getElementById('ptGoalNumber').value > 0
   var spendingSpanValid = document.getElementById('spendingSpan') != null && document.getElementById('spendingSpan').value >= 0
@@ -119,12 +126,115 @@ function goalSave(){
     document.getElementById('goalSaveMessage').innerHTML = "Enter Valid Goal Period"
   }
 
-  createMessage(currSpendingData)
+  setTimeout(clearSaveMessage,1000)
   fetchFields()
 }
 
-function createMessage()
+function clearSaveMessage()
 {
+  document.getElementById('goalSaveMessage').innerHTML = ""
+}
+
+function createMessage(spending, playtime)
+{
+
+  var currSpendingData = JSON.parse(localStorage.getItem('spendingData'))
+
+  var mySpendingGoal = JSON.parse(localStorage.getItem('spendingGoalNumberSaved'))
+  var mySpendingStart = JSON.parse(localStorage.getItem('spendingStartWeekSaved'))
+  var mySpendingSpan = JSON.parse(localStorage.getItem('spendingSpanSaved'))
+  var spendingMessage = '';
+
+  var myPlaytimeGoal = JSON.parse(localStorage.getItem('ptGoalNumberSaved'))
+  var myPlaytimeStart = JSON.parse(localStorage.getItem('ptStartWeekSaved'))
+  var myPlaytimeSpan = JSON.parse(localStorage.getItem('ptSpanSaved'))
+  var playtimeMessage = '';
+
+  //SPENDING MESSAGE
+  //Goal period not started
+  if(mySpendingStart >= currSpendingData.length)
+  {
+    spendingMessage = "The current week is " + (currSpendingData.length - 1) + ", your goal period has not started yet."
+  }   //Middle of goal period
+  else if(+mySpendingStart + +mySpendingSpan >= currSpendingData.length - 1)
+  {
+    if(+mySpendingStart + +mySpendingSpan - (currSpendingData.length - 1) == 1)
+    {
+      spendingMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have spent $" + spending + " out of your $" + mySpendingGoal + " goal with 1 week remaining."
+    }
+    else
+    {
+      spendingMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have spent $" + spending + " out of your $" + mySpendingGoal + " goal with " + ((+mySpendingStart + +mySpendingSpan) - (+currSpendingData.length - 1)) + " weeks remaining."
+    }
+    if(spending < mySpendingGoal)
+    {
+      spendingMessage += "<br>Keep up the good work!"
+    }
+    else if (spending == mySpendingGoal)
+    {
+      spendingMessage += "<br>Be sure not to spend more."
+    }
+    else {
+      spendingMessage += "<br>Please be sure to limit your spending."
+    }
+  } //Goal period over
+  else if(+mySpendingStart + +mySpendingSpan < currSpendingData.length)
+  {
+    if(spending <= mySpendingGoal)
+    {
+      spendingMessage += "Congratulations! <br> You have succeeded at "
+    }
+    else {
+      spendingMessage += "Unfortunately, <br> You have failed "
+    }
+    spendingMessage += "your goal of spending $" + mySpendingGoal + " or less by spending $" + spending +" from weeks " + mySpendingStart +" to " + (+mySpendingStart + +mySpendingSpan)
+
+  }
+
+  //PLAYTIME MESSAGE
+  //Goal period not started
+  if(myPlaytimeStart >= currSpendingData.length)
+  {
+    playtimeMessage = "The current week is " + (currSpendingData.length - 1) + ", your goal period has not started yet."
+  }   //Middle of goal period
+  else if(+myPlaytimeStart + +myPlaytimeSpan >= currSpendingData.length - 1)
+  {
+    if(+myPlaytimeStart + +myPlaytimeSpan - (currSpendingData.length - 1) == 1)
+    {
+      playtimeMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have played " + playtime + " hours out of your " + myPlaytimeGoal + " hour goal with 1 week remaining."
+    }
+    else
+    {
+      playtimeMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have played " + playtime + " hours out of your " + myPlaytimeGoal + " hour goal with " + ((+myPlaytimeStart + +myPlaytimeSpan) - (+currSpendingData.length - 1)) + " weeks remaining."
+    }
+    if(playtime < myPlaytimeGoal)
+    {
+      playtimeMessage += "<br>Keep up the good work!"
+    }
+    else if (playtime == myPlaytimeGoal)
+    {
+      playtimeMessage += "<br>Be sure not to play too much."
+    }
+    else {
+      playtimeMessage += "<br>Please be sure to limit your playtime."
+    }
+  } //Goal period over
+  else if(+myPlaytimeStart + +myPlaytimeSpan < currSpendingData.length)
+  {
+    if(playtime <= myPlaytimeGoal)
+    {
+      playtimeMessage += "Congratulations! <br> You have succeeded at "
+    }
+    else {
+      playtimeMessage += "Unfortunately, <br> You have failed "
+    }
+    playtimeMessage += "your goal of playing " + myPlaytimeGoal + " hours or less by playing for " + playtime +" hours from weeks " + myPlaytimeStart +" to " + (+myPlaytimeStart + +myPlaytimeSpan)
+
+  }
+
+
+  document.getElementById('spendingGoalDescription').innerHTML = spendingMessage
+  document.getElementById('ptGoalDescription').innerHTML = playtimeMessage
 
 
 }
