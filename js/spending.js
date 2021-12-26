@@ -25,6 +25,9 @@ const configSpending = {
         plugins: {
             title: {
                 display: true,
+                font: {
+                    size: 18
+                },
                 text: title
             },
             legend: {

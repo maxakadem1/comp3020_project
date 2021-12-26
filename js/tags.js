@@ -39,6 +39,9 @@ const config = {
         plugins: {
             title: {
                 display: true,
+                font: {
+                    size: 18
+                },
                 text: 'Favourite Tags'
             }
         },

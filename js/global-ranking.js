@@ -10,12 +10,12 @@ const data = {
     datasets: [{
         label: 'User',
         backgroundColor: 'rgb(255, 99, 132, 0.7)',
-        borderColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132, 0.7)',
         data: JSON.parse(localStorage.getItem('playtimeTotalData'))
     }, {
         label: 'Global User Average',
         backgroundColor: 'rgba(54, 162, 235, 0.7)',
-        borderColor: 'rgb(54, 162, 235)',
+        borderColor: 'rgb(54, 162, 235, 0.7)',
         data: JSON.parse(localStorage.getItem('playtimeGlobalData'))
     }]
 };
@@ -46,10 +46,14 @@ const configTotalPlaytime = {
         plugins: {
             title: {
                 display: true,
-                text: title
+                font: {
+                    size: 18
+                },
+                text: title,
             },
             legend: {
-                display: true
+                display: true,
+                borderColor: 'rgb(255, 99, 132, 0.7)'
             }
         },
         scales: {
@@ -79,6 +83,9 @@ const configGlobalSpending = {
         plugins: {
             title: {
                 display: true,
+                font: {
+                    size: 18
+                },
                 text: spendingTitle
             },
             legend: {
