@@ -34,3 +34,35 @@ if (localStorage.getItem('spendingData') == null) {
     localStorage.setItem('spendingData', JSON.stringify(spendingDefaultData))
     console.log(localStorage.getItem('spendingData'));
 }
+
+const spendingGlobalDefaultData = [10, 20, 30, 40, 50] // need to create the rest of the values
+
+if (localStorage.getItem('spendingGlobalData') == null) {
+    localStorage.setItem('spendingGlobalData', JSON.stringify(spendingGlobalDefaultData))
+    console.log(localStorage.getItem('spendingGlobalData'));
+}
+
+// Playtime Total Data
+function sumPlaytimeData(game1, game2, game3, game4) {
+    let playtimeTotalData = [];
+
+    for (let i = 0; i < game1.length; i++) {
+        playtimeTotalData[i] = game1[i] + game2[i] + game3[i] + game4[i];
+    }
+    return playtimeTotalData;
+}
+
+const playtimeTotalDefaultData = sumPlaytimeData(playtimeDefault, playtimeDefault2, playtimeDefault3, playtimeDefault4);
+
+if (localStorage.getItem('playtimeTotalData') == null) {
+    localStorage.setItem('playtimeTotalData', JSON.stringify(playtimeTotalDefaultData))
+    console.log(localStorage.getItem('playtimeTotalData'));
+}
+
+// Global Playtime Data
+const playtimeGlobalDefaultData = [39, 0, 2, 5, 3] // need to create the rest of the values
+
+if (localStorage.getItem('playtimeGlobalData') == null) {
+    localStorage.setItem('playtimeGlobalData', JSON.stringify(playtimeGlobalDefaultData))
+    console.log(localStorage.getItem('playtimeGlobalData'));
+}
