@@ -9,13 +9,13 @@ const data = {
     labels: playtimeDefaultLabel,
     datasets: [{
         label: 'User',
-        backgroundColor: 'rgb(255, 99, 132, 0.7)',
-        borderColor: 'rgb(255, 99, 132, 0.7)',
+        backgroundColor: 'rgba(208, 91, 186, 0.7)',
+        borderColor: 'rgba(208, 91, 186, 0.7)',
         data: JSON.parse(localStorage.getItem('playtimeTotalData'))
     }, {
         label: 'Global User Average',
-        backgroundColor: 'rgba(54, 162, 235, 0.7)',
-        borderColor: 'rgb(54, 162, 235, 0.7)',
+        backgroundColor: 'rgba(53, 205, 150, 0.7)',
+        borderColor: 'rgba(53, 205, 150, 0.7)',
         data: JSON.parse(localStorage.getItem('playtimeGlobalData'))
     }]
 };

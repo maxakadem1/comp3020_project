@@ -231,23 +231,23 @@ function swapPlaytimeData(chart, labels, dataSet, dataset2, dataset3, dataset4, 
         labels: labels,
         datasets: [{
             label: 'Game 1',
-            backgroundColor: 'rgb(255, 99, 132, 0.7)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgb(197, 162, 21, 0.7)',
+            borderColor: 'rgb(197, 162, 21)',
             data: dataSet
         }, {
             label: 'Game 2',
-            backgroundColor: 'rgb(54, 162, 235, 0.7)',
-            borderColor: 'rgb(54, 162, 235)',
+            backgroundColor: 'rgb(104, 197, 232, 0.7)',
+            borderColor: 'rgb(104, 197, 232)',
             data: dataset2
         }, {
             label: 'Game 3',
-            backgroundColor: 'rgba(255, 159, 64, 0.7)',
-            borderColor: 'rgba(255, 159, 64)',
+            backgroundColor: 'rgba(208, 91, 186, 0.7)',
+            borderColor: 'rgba(208, 91, 186)',
             data: dataset3
         }, {
             label: 'Game 4',
-            backgroundColor: 'rgba(153, 102, 255, 0.7)',
-            borderColor: 'rgba(153, 102, 255)',
+            backgroundColor: 'rgba(53, 205, 150, 0.7)',
+            borderColor: 'rgba(53, 205, 150)',
             data: dataset4
         }]
     };

@@ -10,8 +10,8 @@ const data = {
     labels: defaultLabel,
     datasets: [{
         label: spendingData1,
-        backgroundColor: 'rgb(255, 99, 132, 0.7)',
-        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(208, 91, 186, 0.7)',
+        borderColor: 'rgba(208, 91, 186)',
         data: JSON.parse(localStorage.getItem('spendingData'))
     }]
 };
