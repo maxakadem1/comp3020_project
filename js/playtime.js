@@ -3,21 +3,35 @@ const title = 'Playtime History of All Games'
 const xLabel = 'Week'
 const yLabel = 'Time (hr)'
 
-const totalLabel = 'Total'
+const dataset1 = 'Game 1'
+const dataset2 = 'Game 2'
+const dataset3 = 'Game 3'
+const dataset4 = "Game 4"
 // <block:setup:1>
 const data = {
     labels: playtimeDefaultLabel,
     datasets: [{
-        label: totalLabel,
+        label: dataset1,
         backgroundColor: 'rgb(255, 99, 132, 0.7)',
         borderColor: 'rgb(255, 99, 132)',
         data: JSON.parse(localStorage.getItem('playtimeData'))
     },{
-        label: 'dataset 2',
+        label: dataset2,
         backgroundColor: 'rgb(54, 162, 235, 0.7)',
         borderColor: 'rgb(54, 162, 235)',
         data: JSON.parse(localStorage.getItem('playtimeData2'))
-    }]
+    },{
+        label: dataset3,
+        backgroundColor: 'rgba(255, 159, 64, 0.7)',
+        borderColor: 'rgba(255, 159, 64)',
+        data: JSON.parse(localStorage.getItem('playtimeData3'))
+    },{
+        label: dataset4,
+        backgroundColor: 'rgba(153, 102, 255, 0.7)',
+        borderColor: 'rgba(153, 102, 255)',
+        data: JSON.parse(localStorage.getItem('playtimeData4'))
+    },
+    ]
 };
 // </block:setup>
 

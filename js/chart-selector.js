@@ -16,58 +16,113 @@ const ptWeekData2 = JSON.parse(localStorage.getItem('playtimeData2'));
 const ptMonthData2 = new Array(Math.ceil(ptWeekData2.length / 4));
 const ptYearData2 = new Array(Math.ceil(ptMonthData2.length / 12));
 
+const ptWeekData3 = JSON.parse(localStorage.getItem('playtimeData3'));
+const ptMonthData3 = new Array(Math.ceil(ptWeekData3.length / 4));
+const ptYearData3 = new Array(Math.ceil(ptMonthData3.length / 12));
+
+const ptWeekData4 = JSON.parse(localStorage.getItem('playtimeData4'));
+const ptMonthData4 = new Array(Math.ceil(ptWeekData4.length / 4));
+const ptYearData4 = new Array(Math.ceil(ptMonthData4.length / 12));
+
 // Playtime Data
 if (localStorage.getItem('playtimeData') != null) {
     //Occupying Month and Year with 0's for calculation
-    for (var i = 0; i < ptMonthData.length; i++) {
+    for (let i = 0; i < ptMonthData.length; i++) {
         ptMonthData[i] = 0
     }
-    for (var i = 0; i < ptYearData.length; i++) {
+    for (let i = 0; i < ptYearData.length; i++) {
         ptYearData[i] = 0
     }
 
     //Adding weeks in groups of 4 to get monthly totals
-    for (var i = 0; i < ptWeekData.length; i++) {
-        var monthPeriod = Math.floor(i / 4)
+    for (let i = 0; i < ptWeekData.length; i++) {
+        const monthPeriod = Math.floor(i / 4)
         ptMonthData[monthPeriod] += ptWeekData[i]
     }
 
     //Adding months in groups of 12 to get yearly totals
-    for (var i = 0; i < ptMonthData.length; i++) {
-        var yearPeriod = Math.floor(i / 12)
+    for (let i = 0; i < ptMonthData.length; i++) {
+        const yearPeriod = Math.floor(i / 12)
         ptYearData[yearPeriod] += ptMonthData[i]
     }
 }
+
 // playtime dataset2
 if (localStorage.getItem('playtimeData2') != null) {
     //Occupying Month and Year with 0's for calculation
-    for (var i = 0; i < ptMonthData2.length; i++) {
+    for (let i = 0; i < ptMonthData2.length; i++) {
         ptMonthData2[i] = 0
     }
-    for (var i = 0; i < ptYearData2.length; i++) {
+    for (let i = 0; i < ptYearData2.length; i++) {
         ptYearData2[i] = 0
     }
 
     //Adding weeks in groups of 4 to get monthly totals
-    for (var i = 0; i < ptWeekData2.length; i++) {
-        var monthPeriod = Math.floor(i / 4)
+    for (let i = 0; i < ptWeekData2.length; i++) {
+        const monthPeriod = Math.floor(i / 4)
         ptMonthData2[monthPeriod] += ptWeekData2[i]
     }
 
     //Adding months in groups of 12 to get yearly totals
-    for (var i = 0; i < ptMonthData2.length; i++) {
-        var yearPeriod = Math.floor(i / 12)
+    for (let i = 0; i < ptMonthData2.length; i++) {
+        const yearPeriod = Math.floor(i / 12)
         ptYearData2[yearPeriod] += ptMonthData2[i]
+    }
+}
+
+// playtime dataset3
+if (localStorage.getItem('playtimeData3') != null) {
+    //Occupying Month and Year with 0's for calculation
+    for (let i = 0; i < ptMonthData3.length; i++) {
+        ptMonthData3[i] = 0
+    }
+    for (let i = 0; i < ptYearData3.length; i++) {
+        ptYearData3[i] = 0
+    }
+
+    //Adding weeks in groups of 4 to get monthly totals
+    for (let i = 0; i < ptWeekData3.length; i++) {
+        const monthPeriod = Math.floor(i / 4)
+        ptMonthData3[monthPeriod] += ptWeekData3[i]
+    }
+
+    //Adding months in groups of 12 to get yearly totals
+    for (let i = 0; i < ptMonthData3.length; i++) {
+        const yearPeriod = Math.floor(i / 12)
+        ptYearData3[yearPeriod] += ptMonthData3[i]
+    }
+}
+// playtime dataset4
+if (localStorage.getItem('playtimeData4') != null) {
+    //Occupying Month and Year with 0's for calculation
+    for (let i = 0; i < ptMonthData4.length; i++) {
+        ptMonthData4[i] = 0
+    }
+    for (let i = 0; i < ptYearData4.length; i++) {
+        ptYearData4[i] = 0
+    }
+
+    //Adding weeks in groups of 4 to get monthly totals
+    for (let i = 0; i < ptWeekData4.length; i++) {
+        const monthPeriod = Math.floor(i / 4)
+        ptMonthData4[monthPeriod] += ptWeekData4[i]
+    }
+
+    //Adding months in groups of 12 to get yearly totals
+    for (let i = 0; i < ptMonthData4.length; i++) {
+        const yearPeriod = Math.floor(i / 12)
+        ptYearData4[yearPeriod] += ptMonthData4[i]
     }
 }
 //const ptWeekData = [3, 5, 2, 0, 9, 11, 4, 8, 1, 7, 10, 4, 3, 3, 5, 1, 8, 5, 11, 6, 3, 7, 10, 9, 4, 5, 7, 4, 11, 8, 5, 11, 1, 0, 5, 10, 7, 1, 6, 2, 0, 1, 6, 8, 3, 5, 5, 3, 1, 0, 6, 7, 11, 11, 4, 11, 11, 7, 10, 4, 5, 0, 2, 6, 4, 5, 8, 3, 2, 5, 4, 1, 1, 6, 4, 1, 4, 10, 6, 11, 2, 9, 3, 3, 6, 11, 4, 5, 5, 5, 11, 6, 6, 11, 1, 7, 9, 3, 2, 2, 6, 0, 7, 10, 1, 11, 1, 0, 10, 9, 5, 1, 4, 1, 3, 0, 5, 11, 9, 7, 11, 4, 1, 7, 3, 8, 10, 9, 5, 1]
 //const ptMonthData = [10, 32, 22, 12, 30, 29, 20, 35, 16, 16, 15, 16, 14, 37, 32, 13, 20, 12, 12, 31, 17, 26, 27, 25, 16, 23, 13, 25, 8, 32, 23, 30, 6]
+//const ptYearData = [253, 266, 176];
 
 // Spending Data
 const spendingWeekData = JSON.parse(localStorage.getItem('spendingData'));
 const spendingMonthData = new Array(Math.ceil(spendingWeekData.length / 4));
 const spendingYearData = new Array(Math.ceil(spendingMonthData.length / 12));
-//const ptYearData = [253, 266, 176];
+
 
 if (localStorage.getItem('spendingData') != null) {
     //Occupying Month and Year with 0's for calculation
@@ -96,17 +151,29 @@ if (localStorage.getItem('spendingData') != null) {
 
 // Global Ranking Data
 
-function swapData(chart, labels, dataSet, dataset2, xLabel) {
+function swapData(chart, labels, dataSet, dataset2, dataset3, dataset4, xLabel) {
     const newDataset = {
         labels: labels,
         datasets: [{
+            label: 'Game 1',
             backgroundColor: 'rgb(255, 99, 132, 0.7)',
             borderColor: 'rgb(255, 99, 132)',
             data: dataSet
         }, {
+            label: 'Game 2',
             backgroundColor: 'rgb(54, 162, 235, 0.7)',
             borderColor: 'rgb(54, 162, 235)',
             data: dataset2
+        }, {
+            label: 'Game 3',
+            backgroundColor: 'rgba(255, 159, 64, 0.7)',
+            borderColor: 'rgba(255, 159, 64)',
+            data: dataset3
+        }, {
+            label: 'Game 4',
+            backgroundColor: 'rgba(153, 102, 255, 0.7)',
+            borderColor: 'rgba(153, 102, 255)',
+            data: dataset4
         }]
     };
 
@@ -142,9 +209,9 @@ if (document.getElementById("playtime-page")) {
         document.getElementById("month-btn").addEventListener("click", () => swapGlobalData(playTimeChart, monthLabels, ptMonthData, 'Month'));
         document.getElementById("year-btn").addEventListener("click", () => swapGlobalData(playTimeChart, yearLabels, ptYearData, 'Year'));
     } else {
-        document.getElementById("week-btn").addEventListener("click", () => swapData(playTimeChart, weekLabels, ptWeekData, ptWeekData2, 'Week'));
-        document.getElementById("month-btn").addEventListener("click", () => swapData(playTimeChart, monthLabels, ptMonthData, ptMonthData2, 'Month'));
-        document.getElementById("year-btn").addEventListener("click", () => swapData(playTimeChart, yearLabels, ptYearData, ptYearData2, 'Year'));
+        document.getElementById("week-btn").addEventListener("click", () => swapData(playTimeChart, weekLabels, ptWeekData, ptWeekData2, ptWeekData3, ptWeekData4, 'Week'));
+        document.getElementById("month-btn").addEventListener("click", () => swapData(playTimeChart, monthLabels, ptMonthData, ptMonthData2, ptMonthData3, ptMonthData4, 'Month'));
+        document.getElementById("year-btn").addEventListener("click", () => swapData(playTimeChart, yearLabels, ptYearData, ptYearData2, ptYearData3, ptYearData4, 'Year'));
     }
 }
 
