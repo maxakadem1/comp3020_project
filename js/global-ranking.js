@@ -28,15 +28,27 @@ const data2 = {
     labels: playtimeDefaultLabel,
     datasets: [{
         label: 'User',
-        backgroundColor: 'rgb(255, 99, 132, 0.7)',
-        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(208, 91, 186, 0.7)',
+        borderColor: 'rgba(208, 91, 186)',
         data: JSON.parse(localStorage.getItem('spendingData'))
     }, {
         label: 'Global User Average',
-        backgroundColor: 'rgba(54, 162, 235, 0.7)',
-        borderColor: 'rgb(54, 162, 235)',
+        backgroundColor: 'rgb(104, 197, 232, 0.7)',
+        borderColor: 'rgb(104, 197, 232)',
         data: JSON.parse(localStorage.getItem('spendingGlobalData'))
     }]
+};
+
+const plugin = {
+    id: 'custom_canvas_background_color',
+    beforeDraw: (chart) => {
+        const ctx = chart.canvas.getContext('2d');
+        ctx.save();
+        ctx.globalCompositeOperation = 'destination-over';
+        ctx.fillStyle = '#262d31';
+        ctx.fillRect(0, 0, chart.width, chart.height);
+        ctx.restore();
+    }
 };
 
 const configTotalPlaytime = {
@@ -45,35 +57,57 @@ const configTotalPlaytime = {
     options: {
         plugins: {
             title: {
+                color: '#d5d6d7',
                 display: true,
                 font: {
-                    size: 18
+                    size: 22
                 },
-                text: title,
+                text: title
             },
             legend: {
                 display: true,
-                borderColor: 'rgb(255, 99, 132, 0.7)'
+                labels: {
+                    color: '#9ea0a3',
+                }
             }
         },
         scales: {
             y: {
+                grid: {
+                    borderColor:'#d5d6d7',
+                },
+                ticks: {
+                    color: '#9ea0a3',
+                },
                 title: {
+                    color: '#d5d6d7',
                     display: true,
+                    font: {
+                        size: 16
+                    },
                     text: yLabel
                 }
             },
             x: {
                 grid: {
+                    borderColor:'#d5d6d7',
                     display: false
                 },
+                ticks: {
+                    color: '#9ea0a3',
+                },
                 title: {
+                    color: '#d5d6d7',
                     display: true,
+                    font: {
+                        size: 16
+                    },
                     text: xLabel
                 }
             }
         }
-    }
+    },
+    plugins: [plugin]
 };
 
 const configGlobalSpending = {
@@ -82,32 +116,55 @@ const configGlobalSpending = {
     options: {
         plugins: {
             title: {
+                color: '#d5d6d7',
                 display: true,
                 font: {
-                    size: 18
+                    size: 22
                 },
                 text: spendingTitle
             },
             legend: {
-                display: true
+                display: true,
+                labels: {
+                    color: '#9ea0a3',
+                }
             }
         },
         scales: {
             y: {
+                grid: {
+                    borderColor:'#d5d6d7',
+                },
+                ticks: {
+                    color: '#9ea0a3',
+                },
                 title: {
+                    color: '#d5d6d7',
                     display: true,
+                    font: {
+                        size: 16
+                    },
                     text: ySpendingLabel
                 }
             },
             x: {
                 grid: {
+                    borderColor:'#d5d6d7',
                     display: false
                 },
+                ticks: {
+                    color: '#9ea0a3',
+                },
                 title: {
+                    color: '#d5d6d7',
                     display: true,
+                    font: {
+                        size: 16
+                    },
                     text: xSpendingLabel
                 }
             }
         }
-    }
+    },
+    plugins: [plugin]
 };

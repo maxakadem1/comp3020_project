@@ -25,7 +25,7 @@ const ptWeekData4 = JSON.parse(localStorage.getItem('playtimeData4'));
 const ptMonthData4 = new Array(Math.ceil(ptWeekData4.length / 4));
 const ptYearData4 = new Array(Math.ceil(ptMonthData4.length / 12));
 
-// Calcuate month/Yearly values for 4 playtime datasets
+// Calculate month/Yearly values for 4 playtime datasets
 if (localStorage.getItem('playtimeData') != null) {
     //Occupying Month and Year with 0's for calculation
     for (let i = 0; i < ptMonthData.length; i++) {
@@ -274,13 +274,13 @@ function swapGlobalData(chart, labels, userDataSet, globalDataSet, xLabel) {
         labels: labels,
         datasets: [{
             label: 'User',
-            backgroundColor: 'rgba(208, 91, 186, 0.7)',
-            borderColor: 'rgba(208, 91, 186)',
+            backgroundColor: 'rgba(53, 205, 150, 0.7)',
+            borderColor: 'rgba(53, 205, 150)',
             data: userDataSet
         }, {
             label: 'Global Users',
-            backgroundColor: 'rgb(104, 197, 232, 0.7)',
-            borderColor: 'rgb(104, 197, 232)',
+            backgroundColor: 'rgba(208, 91, 186, 0.7)',
+            borderColor: 'rgba(208, 91, 186)',
             data: globalDataSet
         }]
     };

@@ -1,4 +1,3 @@
-
 const favouriteTags = ['Adventure', 'Indie', 'Multiplayer', 'Puzzle', 'Single-player', 'Strategy']
 const tagData = [10, 20, 30, 40, 50, 60]
 const bgColours = [
@@ -52,9 +51,10 @@ const config = {
     options: {
         plugins: {
             title: {
+                color: '#d5d6d7',
                 display: true,
                 font: {
-                    size: 18
+                    size: 22
                 },
                 text: 'Favourite Tags'
             }
