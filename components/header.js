@@ -21,7 +21,7 @@ class Header extends HTMLElement {
                             <li><a href="tags.html" class="nav-link">Favourite Tags</a></li>
                             <li><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#goalsModal" onclick='fetchFields()'>Goals</a></li>
                             <li><a href="#" class="nav-link">Library</a></li>
-                            <li> <a href="../signin/signin.html" class="nav-link">Log In</a></li>
+                            <li><a href="../signin/signin.html" class="nav-link">Log Out</a></li>
                         </ul>
                     </div>
                 </nav>

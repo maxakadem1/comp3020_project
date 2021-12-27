@@ -24,7 +24,6 @@
 <header-component></header-component>
 
 <!-- Chart -->
-<!-- Can I reuse the same charts but add to chart-selector.js to add 2nd data set? -->
 <div id="global-page" class="container">
     <div id="playtime-page">
         <playtime-buttons-component></playtime-buttons-component>
@@ -43,27 +42,14 @@
 <script>
     const playTimeChart = new Chart(
         document.getElementById('chart1'),
-        configPlaytime
+        configTotalPlaytime
     );
 
     const spendingChart = new Chart(
         document.getElementById('Chart2'),
-        config2
+        configGlobalSpending
     );
 </script>
-
-<!-- chart component test-->
-
-<!--<ptc-component id="gRanking" class="chartBox"></ptc-component>-->
-<!--&lt;!&ndash; Render &ndash;&gt;-->
-<!--<script src="../js/playtime.js"></script>-->
-
-<!--<script>-->
-<!--    const playTimeChart = new Chart(-->
-<!--        document.getElementById('myChart'),-->
-<!--        configPlaytime-->
-<!--    );-->
-<!--</script>-->
 
 <!-- Javascript -->
 <script src="../js/chart-selector.js"></script>

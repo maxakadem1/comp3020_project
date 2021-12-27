@@ -3,18 +3,31 @@ const defaultLabel = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '1
 const title = 'Spending History'
 const xLabel = 'Week'
 const yLabel = 'Dollars Spent (CAD)'
+const spendingData1 = 'Total Spending'
 
 // <block:setup:1>
 const data = {
     labels: defaultLabel,
     datasets: [{
-        label: '',
-        backgroundColor: 'rgb(255, 99, 132, 0.7)',
-        borderColor: 'rgb(255, 99, 132)',
+        label: spendingData1,
+        backgroundColor: 'rgba(208, 91, 186, 0.7)',
+        borderColor: 'rgba(208, 91, 186)',
         data: JSON.parse(localStorage.getItem('spendingData'))
     }]
 };
 // </block:setup>
+
+const plugin = {
+    id: 'custom_canvas_background_color',
+    beforeDraw: (chart) => {
+        const ctx = chart.canvas.getContext('2d');
+        ctx.save();
+        ctx.globalCompositeOperation = 'destination-over';
+        ctx.fillStyle = '#262d31';
+        ctx.fillRect(0, 0, chart.width, chart.height);
+        ctx.restore();
+    }
+};
 
 // <block:config:0>
 const configSpending = {
@@ -24,10 +37,13 @@ const configSpending = {
         plugins: {
             title: {
                 display: true,
+                font: {
+                    size: 18
+                },
                 text: title
             },
             legend: {
-                display: false
+                display: true,
             }
         },
         scales: {
@@ -47,6 +63,7 @@ const configSpending = {
                 }
             }
         }
-    }
+    },
+    plugin: [plugin]
 };
 // </block:config>

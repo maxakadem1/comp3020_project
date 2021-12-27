@@ -60,9 +60,16 @@
 14.11.2021 - Yengin
 - Fixed reference error
 
-15.11.2021 - Yengin
+15.12.2021 - Yengin
 - Componentized timeline buttons
-- fixed global charts to disaply different chart types 
+- fixed global charts to display different chart types 
 
-15.11.2021 - Yengin
+16.12.2021 - Yengin
 - updated all pages to use timeline-button-component
+
+20.12.2021 - Yengin
+- Fixed indentation in header-component
+- 
+25.12.2021 - Yengin
+- Completed Global Ranking Page functionality
+- cleaned up code in chart-selector
