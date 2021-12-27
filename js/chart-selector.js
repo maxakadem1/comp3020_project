@@ -274,8 +274,8 @@ function swapGlobalData(chart, labels, userDataSet, globalDataSet, xLabel) {
         labels: labels,
         datasets: [{
             label: 'User',
-            backgroundColor: 'rgb(197, 162, 21, 0.7)',
-            borderColor: 'rgb(197, 162, 21)',
+            backgroundColor: 'rgba(208, 91, 186, 0.7)',
+            borderColor: 'rgba(208, 91, 186)',
             data: userDataSet
         }, {
             label: 'Global Users',

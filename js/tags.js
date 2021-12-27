@@ -33,6 +33,18 @@ const data = {
 };
 // </block:setup>
 
+const plugin = {
+    id: 'custom_canvas_background_color',
+    beforeDraw: (chart) => {
+        const ctx = chart.canvas.getContext('2d');
+        ctx.save();
+        ctx.globalCompositeOperation = 'destination-over';
+        ctx.fillStyle = '#262d31';
+        ctx.fillRect(0, 0, chart.width, chart.height);
+        ctx.restore();
+    }
+};
+
 // <block:config:0>
 const config = {
     type: 'doughnut',
@@ -47,6 +59,7 @@ const config = {
                 text: 'Favourite Tags'
             }
         },
-    }
+    },
+    plugins: [plugin]
 };
 // </block:config>
