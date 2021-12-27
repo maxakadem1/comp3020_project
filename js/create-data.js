@@ -35,7 +35,7 @@ if (localStorage.getItem('spendingData') == null) {
     console.log(localStorage.getItem('spendingData'));
 }
 
-const spendingGlobalDefaultData = [10, 20, 30, 40, 50] // need to create the rest of the values
+const spendingGlobalDefaultData = [11, 0, 0, 0, 29, 0, 0, 0, 78, 0, 0, 0, 7, 0, 0, 0, 28, 0, 0, 0, 77, 0, 0, 0, 64, 0, 0, 0, 13, 0, 0, 0, 76, 0, 0, 0, 49, 0, 0, 0, 47, 0, 0, 0, 37, 0, 0, 0, 84, 0, 0, 0, 2, 0, 0, 0, 57, 0, 0, 0, 15, 0, 0, 0, 16, 0, 0, 0, 39, 0, 0, 0, 19, 0, 0, 0, 30, 0, 0, 0, 94, 0, 0, 0, 8, 0, 0, 0, 12, 0, 0, 0, 4, 0, 0, 0, 77, 0, 0, 0, 12, 0, 0, 0, 86, 0, 0, 0, 95, 0, 0, 0, 71, 0, 0, 0, 88, 0, 0, 0, 12, 0, 0, 0, 77, 0, 0, 0, 51, 0]
 
 if (localStorage.getItem('spendingGlobalData') == null) {
     localStorage.setItem('spendingGlobalData', JSON.stringify(spendingGlobalDefaultData))
