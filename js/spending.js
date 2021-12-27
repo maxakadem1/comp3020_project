@@ -2,16 +2,16 @@ const defaultLabel = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '1
 
 const title = 'Spending History'
 const xLabel = 'Week'
-const yLabel = 'Dollars Spent (CAD)'
-const spendingData1 = 'Total Spending'
+const yLabel = 'Dollars Spent ($CAD)'
+const spendingData1 = 'User Spending'
 
 // <block:setup:1>
 const data = {
     labels: defaultLabel,
     datasets: [{
         label: spendingData1,
-        backgroundColor: 'rgba(208, 91, 186, 0.7)',
-        borderColor: 'rgba(208, 91, 186)',
+        backgroundColor: 'rgb(104, 197, 232, 0.7)',
+        borderColor: 'rgb(104, 197, 232)',
         data: JSON.parse(localStorage.getItem('spendingData'))
     }]
 };
@@ -36,34 +36,56 @@ const configSpending = {
     options: {
         plugins: {
             title: {
+                color: '#d5d6d7',
                 display: true,
                 font: {
-                    size: 18
+                    size: 22
                 },
                 text: title
             },
             legend: {
                 display: true,
+                labels: {
+                    color: '#9ea0a3',
+                }
             }
         },
         scales: {
             y: {
+                grid: {
+                    borderColor:'#d5d6d7',
+                },
+                ticks: {
+                    color: '#9ea0a3',
+                },
                 title: {
+                    color: '#d5d6d7',
                     display: true,
+                    font: {
+                        size: 16
+                    },
                     text: yLabel
                 }
             },
             x: {
                 grid: {
+                    borderColor:'#d5d6d7',
                     display: false
                 },
+                ticks: {
+                    color: '#9ea0a3',
+                },
                 title: {
+                    color: '#d5d6d7',
                     display: true,
+                    font: {
+                        size: 16
+                    },
                     text: xLabel
                 }
             }
         }
     },
-    plugin: [plugin]
+    plugins: [plugin]
 };
 // </block:config>

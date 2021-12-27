@@ -253,13 +253,13 @@ function swapPlaytimeData(chart, labels, dataSet, dataset2, dataset3, dataset4, 
     chart.update();
 }
 
-function swapSpendingData(chart, labels, userDataSet, globalDataSet, xLabel) {
+function swapSpendingData(chart, labels, userDataSet, xLabel) {
     const newDataset = {
         labels: labels,
         datasets: [{
             label: 'User Spending',
-            backgroundColor: 'rgb(255, 99, 132, 0.7)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgb(104, 197, 232, 0.7)',
+            borderColor: 'rgb(104, 197, 232)',
             data: userDataSet
         }]
     };
@@ -274,13 +274,13 @@ function swapGlobalData(chart, labels, userDataSet, globalDataSet, xLabel) {
         labels: labels,
         datasets: [{
             label: 'User',
-            backgroundColor: 'rgb(255, 99, 132, 0.7)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgb(197, 162, 21, 0.7)',
+            borderColor: 'rgb(197, 162, 21)',
             data: userDataSet
         }, {
             label: 'Global Users',
-            backgroundColor: 'rgba(54, 162, 235, 0.7)',
-            borderColor: 'rgb(54, 162, 235)',
+            backgroundColor: 'rgb(104, 197, 232, 0.7)',
+            borderColor: 'rgb(104, 197, 232)',
             data: globalDataSet
         }]
     };
