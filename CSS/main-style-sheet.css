@@ -1,8 +1,9 @@
 @import 'global.css';
-
+@import 'header.css';
 
 /*
 primary background black #131c21
+secondary background darkslategray #262d31
 on hover black #2d3134
 selected darkslategray #323739
 primary text lightgray #d5d6d7

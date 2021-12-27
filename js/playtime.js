@@ -35,6 +35,18 @@ const data = {
 };
 // </block:setup>
 
+const plugin = {
+    id: 'custom_canvas_background_color',
+    beforeDraw: (chart) => {
+        const ctx = chart.canvas.getContext('2d');
+        ctx.save();
+        ctx.globalCompositeOperation = 'destination-over';
+        ctx.fillStyle = '#262d31';
+        ctx.fillRect(0, 0, chart.width, chart.height);
+        ctx.restore();
+    }
+};
+
 // <block:config:0>
 const configPlaytime = {
     type: 'bar',
@@ -42,6 +54,7 @@ const configPlaytime = {
     options: {
         plugins: {
             title: {
+                color: '#d5d6d7',
                 display: true,
                 font: {
                     size: 18
@@ -49,28 +62,44 @@ const configPlaytime = {
                 text: title
             },
             legend: {
-                display: true
+                display: true,
+                labels: {
+                    color: '#9ea0a3',
+                }
             }
         },
         scales: {
             y: {
+                grid: {
+                    borderColor:'#d5d6d7',
+                },
                 stacked: true,
+                ticks: {
+                    color: '#d5d6d7'
+                },
                 title: {
+                    color: '#d5d6d7',
                     display: true,
                     text: yLabel
                 }
             },
             x: {
                 grid: {
+                    borderColor:'#d5d6d7',
                     display: false
                 },
                 stacked: true,
+                ticks: {
+                    color: '#d5d6d7'
+                },
                 title: {
+                    color: '#d5d6d7',
                     display: true,
-                    text: xLabel
+                    text: xLabel,
                 }
             }
         }
-    }
+    },
+    plugins: [plugin]
 };
 // </block:config>
