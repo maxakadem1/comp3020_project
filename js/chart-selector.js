@@ -7,6 +7,7 @@ const monthLabels = [
     'Jan \'20', 'Feb \'20', 'Mar \'20', 'Apr \'20', 'May \'20', 'Jun \'20', 'Jul \'20', 'Aug \'20', 'Sep \'20', 'Oct \'20', 'Nov \'20', 'Dec \'20',
     'Jan \'21', 'Feb \'21', 'Mar \'21', 'Apr \'21', 'May \'21', 'Jun \'21']
 const yearLabels = ['2019', '2020', '2021'];
+
 // Playtime Data
 const ptWeekData = JSON.parse(localStorage.getItem('playtimeData'));
 const ptMonthData = new Array(Math.ceil(ptWeekData.length / 4));
@@ -23,11 +24,6 @@ const ptYearData3 = new Array(Math.ceil(ptMonthData3.length / 12));
 const ptWeekData4 = JSON.parse(localStorage.getItem('playtimeData4'));
 const ptMonthData4 = new Array(Math.ceil(ptWeekData4.length / 4));
 const ptYearData4 = new Array(Math.ceil(ptMonthData4.length / 12));
-
-// const spendingWeekData = [84, 0, 0, 0, 87, 0, 0, 0, 27, 0, 0, 0, 40, 0, 0, 0, 65, 0, 0, 0, 56, 0, 0, 0, 99, 0, 0, 0, 0, 0, 0, 0, 94, 0, 0, 0, 47, 0, 0, 0, 99, 0, 0, 0, 99, 0, 0, 0, 12, 0, 0, 0, 19, 0, 0, 0, 7, 0, 0, 0, 37, 0, 0, 0, 77, 0, 0, 0, 27, 0, 0, 0, 39, 0, 0, 0, 67, 0, 0, 0, 7, 0, 0, 0, 54, 0, 0, 0, 38, 0, 0, 0, 60, 0, 0, 0, 78, 0, 0, 0, 68, 0, 0, 0, 91, 0, 0, 0, 93, 0, 0, 0, 18, 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 76, 0, 0, 0, 77, 0]
-// const spendingMonthData = [84, 87, 27, 40, 65, 56, 99, 0, 94, 47, 99, 99, 12, 19, 7, 37, 77, 27, 39, 67, 7, 54, 38, 60, 78, 68, 91, 93, 18, 60, 0, 76, 77]
-// const spendingYearData = [797, 444, 561]
-
 
 // Calcuate month/Yearly values for 4 playtime datasets
 if (localStorage.getItem('playtimeData') != null) {

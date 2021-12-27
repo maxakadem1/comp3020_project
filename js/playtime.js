@@ -57,7 +57,7 @@ const configPlaytime = {
                 color: '#d5d6d7',
                 display: true,
                 font: {
-                    size: 18
+                    size: 22
                 },
                 text: title
             },
@@ -75,11 +75,14 @@ const configPlaytime = {
                 },
                 stacked: true,
                 ticks: {
-                    color: '#d5d6d7'
+                    color: '#9ea0a3',
                 },
                 title: {
                     color: '#d5d6d7',
                     display: true,
+                    font: {
+                        size: 16
+                    },
                     text: yLabel
                 }
             },
@@ -90,11 +93,14 @@ const configPlaytime = {
                 },
                 stacked: true,
                 ticks: {
-                    color: '#d5d6d7'
+                    color: '#9ea0a3',
                 },
                 title: {
                     color: '#d5d6d7',
                     display: true,
+                    font: {
+                        size: 16
+                    },
                     text: xLabel,
                 }
             }
