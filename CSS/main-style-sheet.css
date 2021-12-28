@@ -8,8 +8,8 @@ background black #131c21
 surface darkslategray #262d31
 on hover black #2d3134
 pressed darkslategray #323739
-on surface text lightgray #d5d6d7
-on surface secondary text darkgray #9ea0a3
+on surface text(size 22) lightgray #d5d6d7
+on surface secondary text(size 16) darkgray #9ea0a3
 text pressed #e9eaeb
 
 Primary/Secondary:

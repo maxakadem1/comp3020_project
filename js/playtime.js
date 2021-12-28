@@ -12,23 +12,27 @@ const data = {
     labels: playtimeDefaultLabel,
     datasets: [{
         label: dataset1,
-        backgroundColor: 'rgba(197, 162, 21, 0.7)',
+        backgroundColor: 'rgba(197, 162, 21, 0.2)',
         borderColor: 'rgb(197, 162, 21)',
+        borderWidth: 1,
         data: JSON.parse(localStorage.getItem('playtimeData'))
     },{
         label: dataset2,
-        backgroundColor: 'rgba(104, 197, 232, 0.7)',
+        backgroundColor: 'rgba(104, 197, 232, 0.2)',
         borderColor: 'rgb(104, 197, 232)',
+        borderWidth: 1,
         data: JSON.parse(localStorage.getItem('playtimeData2'))
     },{
         label: dataset3,
-        backgroundColor: 'rgba(208, 91, 186, 0.7)',
+        backgroundColor: 'rgba(208, 91, 186, 0.2)',
         borderColor: 'rgb(208, 91, 186)',
+        borderWidth: 1,
         data: JSON.parse(localStorage.getItem('playtimeData3'))
     },{
         label: dataset4,
-        backgroundColor: 'rgba(53, 205, 150, 0.7)',
+        backgroundColor: 'rgba(53, 205, 150, 0.2)',
         borderColor: 'rgb(53, 205, 150)',
+        borderWidth: 1,
         data: JSON.parse(localStorage.getItem('playtimeData4'))
     },
     ]
