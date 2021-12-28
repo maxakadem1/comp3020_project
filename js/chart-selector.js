@@ -321,6 +321,34 @@ if (document.getElementById("global-page") && document.getElementById("spending-
     document.getElementById("spend-year-btn").addEventListener("click", () => swapGlobalData(spendingChart, yearLabels, spendingYearData, spendingGlobalYearData, 'Year'));
 }
 
+const weekBtn = document.getElementById('week-btn');
+const monthBtn = document.getElementById('month-btn');
+const yearBtn = document.getElementById('year-btn');
+
+function weekActive() {
+    if (hasActive(monthBtn, yearBtn) || hasActive(yearBtn, monthBtn)) {
+        weekBtn.classList.add('btn-active');
+    }
+}
+
+function monthActive() {
+    if (hasActive(weekBtn, yearBtn) || hasActive(yearBtn, weekBtn)) {
+        monthBtn.classList.add('btn-active');
+    }
+}
+
+function yearActive() {
+    if (hasActive(weekBtn, yearBtn) || hasActive(monthBtn, weekBtn)) {
+        yearBtn.classList.add('btn-active');
+    }
+}
+
+function hasActive(class1, class2) {
+    if (class1.classList.contains('btn-active') && !class2.classList.contains('btn-active)')) {
+        class1.classList.remove('btn-active');
+        return true;
+    }
+}
 
 // function showPlaytime() {
 //     let chart = document.getElementById('playtime-month');
