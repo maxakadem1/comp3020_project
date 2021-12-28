@@ -1,4 +1,3 @@
-
 const favouriteTags = ['Adventure', 'Indie', 'Multiplayer', 'Puzzle', 'Single-player', 'Strategy']
 const tagData = [10, 20, 30, 40, 50, 60]
 const bgColours = [
@@ -33,6 +32,18 @@ const data = {
 };
 // </block:setup>
 
+const plugin = {
+    id: 'custom_canvas_background_color',
+    beforeDraw: (chart) => {
+        const ctx = chart.canvas.getContext('2d');
+        ctx.save();
+        ctx.globalCompositeOperation = 'destination-over';
+        ctx.fillStyle = '#262d31';
+        ctx.fillRect(0, 0, chart.width, chart.height);
+        ctx.restore();
+    }
+};
+
 // <block:config:0>
 const config = {
     type: 'doughnut',
@@ -40,13 +51,15 @@ const config = {
     options: {
         plugins: {
             title: {
+                color: '#d5d6d7',
                 display: true,
                 font: {
-                    size: 18
+                    size: 22
                 },
                 text: 'Favourite Tags'
             }
         },
-    }
+    },
+    plugins: [plugin]
 };
 // </block:config>

@@ -25,7 +25,7 @@ const ptWeekData4 = JSON.parse(localStorage.getItem('playtimeData4'));
 const ptMonthData4 = new Array(Math.ceil(ptWeekData4.length / 4));
 const ptYearData4 = new Array(Math.ceil(ptMonthData4.length / 12));
 
-// Calcuate month/Yearly values for 4 playtime datasets
+// Calculate month/Yearly values for 4 playtime datasets
 if (localStorage.getItem('playtimeData') != null) {
     //Occupying Month and Year with 0's for calculation
     for (let i = 0; i < ptMonthData.length; i++) {
@@ -253,13 +253,13 @@ function swapPlaytimeData(chart, labels, dataSet, dataset2, dataset3, dataset4, 
     chart.update();
 }
 
-function swapSpendingData(chart, labels, userDataSet, globalDataSet, xLabel) {
+function swapSpendingData(chart, labels, userDataSet, xLabel) {
     const newDataset = {
         labels: labels,
         datasets: [{
             label: 'User Spending',
-            backgroundColor: 'rgb(255, 99, 132, 0.7)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgb(104, 197, 232, 0.7)',
+            borderColor: 'rgb(104, 197, 232)',
             data: userDataSet
         }]
     };
@@ -274,13 +274,13 @@ function swapGlobalData(chart, labels, userDataSet, globalDataSet, xLabel) {
         labels: labels,
         datasets: [{
             label: 'User',
-            backgroundColor: 'rgb(255, 99, 132, 0.7)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgba(53, 205, 150, 0.7)',
+            borderColor: 'rgba(53, 205, 150)',
             data: userDataSet
         }, {
             label: 'Global Users',
-            backgroundColor: 'rgba(54, 162, 235, 0.7)',
-            borderColor: 'rgb(54, 162, 235)',
+            backgroundColor: 'rgba(208, 91, 186, 0.7)',
+            borderColor: 'rgba(208, 91, 186)',
             data: globalDataSet
         }]
     };
@@ -321,6 +321,55 @@ if (document.getElementById("global-page") && document.getElementById("spending-
     document.getElementById("spend-year-btn").addEventListener("click", () => swapGlobalData(spendingChart, yearLabels, spendingYearData, spendingGlobalYearData, 'Year'));
 }
 
+const weekBtn = document.getElementById('week-btn');
+const monthBtn = document.getElementById('month-btn');
+const yearBtn = document.getElementById('year-btn');
+const spendWeekBtn = document.getElementById('spend-week-btn');
+const spendMonthBtn = document.getElementById('spend-month-btn');
+const spendYearBtn = document.getElementById('spend-year-btn');
+
+function weekActive() {
+    if (hasActive(monthBtn, yearBtn) || hasActive(yearBtn, monthBtn)) {
+        weekBtn.classList.add('btn-active');
+    }
+}
+
+function monthActive() {
+    if (hasActive(weekBtn, yearBtn) || hasActive(yearBtn, weekBtn)) {
+        monthBtn.classList.add('btn-active');
+    }
+}
+
+function yearActive() {
+    if (hasActive(weekBtn, yearBtn) || hasActive(monthBtn, weekBtn)) {
+        yearBtn.classList.add('btn-active');
+    }
+}
+
+function spendWeekActive() {
+    if (hasActive(spendMonthBtn, spendYearBtn) || hasActive(spendYearBtn, spendMonthBtn)) {
+        spendWeekBtn.classList.add('btn-active');
+    }
+}
+
+function spendMonthActive() {
+    if (hasActive(spendWeekBtn, spendYearBtn) || hasActive(spendYearBtn, spendWeekBtn)) {
+        spendMonthBtn.classList.add('btn-active');
+    }
+}
+
+function spendYearActive() {
+    if (hasActive(spendWeekBtn, spendYearBtn) || hasActive(spendMonthBtn, spendWeekBtn)) {
+        spendYearBtn.classList.add('btn-active');
+    }
+}
+
+function hasActive(class1, class2) {
+    if (class1.classList.contains('btn-active') && !class2.classList.contains('btn-active)')) {
+        class1.classList.remove('btn-active');
+        return true;
+    }
+}
 
 // function showPlaytime() {
 //     let chart = document.getElementById('playtime-month');

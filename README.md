@@ -69,7 +69,15 @@
 
 20.12.2021 - Yengin
 - Fixed indentation in header-component
-- 
+
 25.12.2021 - Yengin
 - Completed Global Ranking Page functionality
 - cleaned up code in chart-selector
+
+26.12.2021 - Yengin
+- Set up CSS for styling pages
+- Created dark mode colour palette
+- Began styling header and playtime page
+
+27.12.2021 - Yengin
+- Completed all remaining styling of charts
