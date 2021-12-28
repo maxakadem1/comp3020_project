@@ -324,6 +324,9 @@ if (document.getElementById("global-page") && document.getElementById("spending-
 const weekBtn = document.getElementById('week-btn');
 const monthBtn = document.getElementById('month-btn');
 const yearBtn = document.getElementById('year-btn');
+const spendWeekBtn = document.getElementById('spend-week-btn');
+const spendMonthBtn = document.getElementById('spend-month-btn');
+const spendYearBtn = document.getElementById('spend-year-btn');
 
 function weekActive() {
     if (hasActive(monthBtn, yearBtn) || hasActive(yearBtn, monthBtn)) {
@@ -340,6 +343,24 @@ function monthActive() {
 function yearActive() {
     if (hasActive(weekBtn, yearBtn) || hasActive(monthBtn, weekBtn)) {
         yearBtn.classList.add('btn-active');
+    }
+}
+
+function spendWeekActive() {
+    if (hasActive(spendMonthBtn, spendYearBtn) || hasActive(spendYearBtn, spendMonthBtn)) {
+        spendWeekBtn.classList.add('btn-active');
+    }
+}
+
+function spendMonthActive() {
+    if (hasActive(spendWeekBtn, spendYearBtn) || hasActive(spendYearBtn, spendWeekBtn)) {
+        spendMonthBtn.classList.add('btn-active');
+    }
+}
+
+function spendYearActive() {
+    if (hasActive(spendWeekBtn, spendYearBtn) || hasActive(spendMonthBtn, spendWeekBtn)) {
+        spendYearBtn.classList.add('btn-active');
     }
 }
 
