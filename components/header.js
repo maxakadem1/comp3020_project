@@ -6,26 +6,46 @@ class Header extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <div class="container">
-                <nav class="navbar navbar-expand-md navbar-light">
-                    <a href="#" class="navbar-brand">GameStat</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu"
-                            aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="toggleMobileMenu">
-                        <ul class="navbar-nav">
-                            <li><a href="index.html" class="nav-link">Dashboard</a></li>
-                            <li><a href="playtime.html" class="nav-link">Playtime</a></li>
-                            <li><a href="spending.html" class="nav-link">Spending</a></li>
-                            <li><a href="globalRanking.html" class="nav-link">Global Rankings</a></li>
-                            <li><a href="tags.html" class="nav-link">Favourite Tags</a></li>
-                            <li><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#goalsModal" onclick='fetchFields()'>Goals</a></li>
-                            <li><a href="#" class="nav-link">Library</a></li>
-                            <li><a href="../signin/signin.html" class="nav-link">Log Out</a></li>
-                        </ul>
-                    </div>
-                </nav>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">GStat</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="playtime.html">Playtime</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="spending.html">Spending</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="globalRanking.html">Rankings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tags.html" >Tags</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#goalsModal" onclick='fetchFields()'>Goals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Library</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Menu </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="../signin/signin.html">Log In</a></li>
+                                <li><a class="dropdown-item" href="#">Register</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+            </div>  
 
             <div class="modal fade" id="goalsModal" tabindex="-1" aria-labelledby="Goals" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-centered">

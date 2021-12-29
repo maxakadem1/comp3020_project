@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
     background-color: #131c21;
 }
@@ -9,3 +15,67 @@ h1 {
 p {
     color:  #d5d6d7;
 }
+
+.modal-content {
+    background-color: #131c21;
+}
+
+.modal-content .modal-header {
+    background-color: #1e2d35;
+}
+
+.modal-content .modal-header h5 {
+    color:  #d5d6d7;
+}
+
+.modal-content .modal-body {
+    background-color: #1e2d35;
+}
+
+.modal-content .modal-body p {
+    color:  #d5d6d7;
+}
+
+.modal-body .modal-footer {
+    background-color: #1e2d35;
+}
+
+.modal-body .modal-footer button {
+    background-color: #1e2d35;
+}
+
+.modal-body .modal-footer button:hover {
+    background-color: #35cd96;
+}
+
+.modal-content {
+    color: #d5d6d7;
+}
+
+.modal-footer {
+    background-color: #1e2d35;
+}
+
+
+
+.progress{
+    background-color: #131c21;
+}
+
+.progress-bar{
+    background-color: #35cd96;
+}
+
+#ptGoalText {
+    color: #131c21;
+    font-size: large;
+    font-weight: 600;
+    
+}
+
+#spendingGoalText{
+    color: #131c21;
+    font-size: large;
+    font-weight: 600;
+}
+
