@@ -227,23 +227,27 @@ function swapPlaytimeData(chart, labels, dataSet, dataset2, dataset3, dataset4, 
         labels: labels,
         datasets: [{
             label: 'Game 1',
-            backgroundColor: 'rgb(197, 162, 21, 0.7)',
+            backgroundColor: 'rgb(197, 162, 21, 0.2)',
             borderColor: 'rgb(197, 162, 21)',
+            borderWidth: 1,
             data: dataSet
         }, {
             label: 'Game 2',
-            backgroundColor: 'rgb(104, 197, 232, 0.7)',
+            backgroundColor: 'rgb(104, 197, 232, 0.2)',
             borderColor: 'rgb(104, 197, 232)',
+            borderWidth: 1,
             data: dataset2
         }, {
             label: 'Game 3',
-            backgroundColor: 'rgba(208, 91, 186, 0.7)',
+            backgroundColor: 'rgba(208, 91, 186, 0.2)',
             borderColor: 'rgba(208, 91, 186)',
+            borderWidth: 1,
             data: dataset3
         }, {
             label: 'Game 4',
-            backgroundColor: 'rgba(53, 205, 150, 0.7)',
+            backgroundColor: 'rgba(53, 205, 150, 0.2)',
             borderColor: 'rgba(53, 205, 150)',
+            borderWidth: 1,
             data: dataset4
         }]
     };
@@ -258,8 +262,9 @@ function swapSpendingData(chart, labels, userDataSet, xLabel) {
         labels: labels,
         datasets: [{
             label: 'User Spending',
-            backgroundColor: 'rgb(104, 197, 232, 0.7)',
-            borderColor: 'rgb(104, 197, 232)',
+            backgroundColor: 'rgba(208, 91, 186, 0.2)',
+            borderColor: 'rgba(208, 91, 186)',
+            borderWidth: 1,
             data: userDataSet
         }]
     };
@@ -274,13 +279,15 @@ function swapGlobalData(chart, labels, userDataSet, globalDataSet, xLabel) {
         labels: labels,
         datasets: [{
             label: 'User',
-            backgroundColor: 'rgba(53, 205, 150, 0.7)',
-            borderColor: 'rgba(53, 205, 150)',
+            backgroundColor: 'rgba(208, 91, 186, 0.2)',
+            borderColor: 'rgba(208, 91, 186)',
+            borderWidth: 1,
             data: userDataSet
         }, {
             label: 'Global Users',
-            backgroundColor: 'rgba(208, 91, 186, 0.7)',
-            borderColor: 'rgba(208, 91, 186)',
+            backgroundColor: 'rgba(53, 205, 150, 0.2)',
+            borderColor: 'rgba(53, 205, 150)',
+            borderWidth: 1,
             data: globalDataSet
         }]
     };

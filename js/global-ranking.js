@@ -9,13 +9,15 @@ const data = {
     labels: playtimeDefaultLabel,
     datasets: [{
         label: 'User',
-        backgroundColor: 'rgba(208, 91, 186, 0.7)',
-        borderColor: 'rgba(208, 91, 186, 0.7)',
+        backgroundColor: 'rgba(208, 91, 186, 0.2)',
+        borderColor: 'rgba(208, 91, 186)',
+        borderWidth: 1,
         data: JSON.parse(localStorage.getItem('playtimeTotalData'))
     }, {
         label: 'Global User Average',
-        backgroundColor: 'rgba(53, 205, 150, 0.7)',
-        borderColor: 'rgba(53, 205, 150, 0.7)',
+        backgroundColor: 'rgba(53, 205, 150, 0.2)',
+        borderColor: 'rgba(53, 205, 150)',
+        borderWidth: 1,
         data: JSON.parse(localStorage.getItem('playtimeGlobalData'))
     }]
 };
@@ -28,13 +30,15 @@ const data2 = {
     labels: playtimeDefaultLabel,
     datasets: [{
         label: 'User',
-        backgroundColor: 'rgba(208, 91, 186, 0.7)',
+        backgroundColor: 'rgba(208, 91, 186, 0.2)',
         borderColor: 'rgba(208, 91, 186)',
+        borderWidth: 1,
         data: JSON.parse(localStorage.getItem('spendingData'))
     }, {
         label: 'Global User Average',
-        backgroundColor: 'rgb(104, 197, 232, 0.7)',
-        borderColor: 'rgb(104, 197, 232)',
+        backgroundColor: 'rgba(53, 205, 150, 0.2)',
+        borderColor: 'rgba(53, 205, 150)',
+        borderWidth:1,
         data: JSON.parse(localStorage.getItem('spendingGlobalData'))
     }]
 };
