@@ -81,3 +81,15 @@
 
 27.12.2021 - Yengin
 - Completed all remaining styling of charts
+
+28.12.2021 - Max
+- Fully remade the top navbar
+- Added hover animation to buttons
+- Added register button
+- Redesigned goals menu
+- Added and implemented "poppins" font
+
+29.12.2021 - Max
+ - Updated Library to the main project version
+ - Redesigned Library to fit in the main project
+ - Added 3 more games to library menu
