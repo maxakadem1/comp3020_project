@@ -147,9 +147,9 @@ function createMessage(spending, playtime) {
     }   //Middle of goal period
     else if (+mySpendingStart + +mySpendingSpan >= currSpendingData.length - 1) {
         if (+mySpendingStart + +mySpendingSpan - (currSpendingData.length - 1) == 1) {
-            spendingMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have spent $" + spending + " out of your $" + mySpendingGoal + " goal with 1 week remaining."
+            spendingMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have spent $" + spending + " out of your $" + mySpendingGoal + " budget with 1 week remaining."
         } else {
-            spendingMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have spent $" + spending + " out of your $" + mySpendingGoal + " goal with " + ((+mySpendingStart + +mySpendingSpan) - (+currSpendingData.length - 1)) + " weeks remaining."
+            spendingMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have spent $" + spending + " out of your $" + mySpendingGoal + " budget with " + ((+mySpendingStart + +mySpendingSpan) - (+currSpendingData.length - 1)) + " weeks remaining."
         }
         if (spending < mySpendingGoal) {
             spendingMessage += "<br>Keep up the good work!"
@@ -176,9 +176,9 @@ function createMessage(spending, playtime) {
     }   //Middle of goal period
     else if (+myPlaytimeStart + +myPlaytimeSpan >= currSpendingData.length - 1) {
         if (+myPlaytimeStart + +myPlaytimeSpan - (currSpendingData.length - 1) == 1) {
-            playtimeMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have played " + playtime + " hours out of your " + myPlaytimeGoal + " hour goal with 1 week remaining."
+            playtimeMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have played " + playtime + " hours out of your " + myPlaytimeGoal + " hour budget with 1 week remaining."
         } else {
-            playtimeMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have played " + playtime + " hours out of your " + myPlaytimeGoal + " hour goal with " + ((+myPlaytimeStart + +myPlaytimeSpan) - (+currSpendingData.length - 1)) + " weeks remaining."
+            playtimeMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have played " + playtime + " hours out of your " + myPlaytimeGoal + " hour budget with " + ((+myPlaytimeStart + +myPlaytimeSpan) - (+currSpendingData.length - 1)) + " weeks remaining."
         }
         if (playtime < myPlaytimeGoal) {
             playtimeMessage += "<br>Keep up the good work!"

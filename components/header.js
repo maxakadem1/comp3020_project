@@ -45,7 +45,7 @@ class Header extends HTMLElement {
                 </div>
             </div>
         </nav>
-            </div>  
+            </div>
 
             <div class="modal fade" id="goalsModal" tabindex="-1" aria-labelledby="Goals" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -55,12 +55,12 @@ class Header extends HTMLElement {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <h5>Spending Goal:</h5>
+                    <h5>Spending Budget:</h5>
                     <div class="progress" style="height: 30px";>
                       <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id = "spendingGoalProgressBar"><p id = "spendingGoalText"></p></div>
                     </div>
                     <br>
-                    <h6>Set your Goal</h6>
+                    <h6>Set your Budget</h6>
                     <div class="form-group row input-title">
                       <div class="col-3">
                         <label>Starting Week</label>
@@ -73,18 +73,19 @@ class Header extends HTMLElement {
                       </div>
 
                       <div class="col-2">
-                        <label>Goal ($)</label>
+                        <label>Budget ($)</label>
                         <input type="number" class="form-control" id="spendingGoalNumber">
                       </div>
                     </div>
                     <br>
                     <p id = 'spendingGoalDescription'></p>
-                    <h5>Playtime Goal:</h5>
+                      <br>
+                    <h5>Playtime Budget:</h5>
                     <div class="progress" style="height: 30px";>
                       <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id = "ptGoalProgressBar"><p id = "ptGoalText"></p></div>
                     </div>
                     <br>
-                    <h6>Set your Goal</h6>
+                    <h6>Set your Budget</h6>
                     <div class="form-group row input-title">
                       <div class="col-3">
                         <label>Starting Week</label>
@@ -97,7 +98,7 @@ class Header extends HTMLElement {
                       </div>
 
                       <div class="col-2">
-                        <label>Goal (Hours)</label>
+                        <label>Budget (Hrs)</label>
                         <input type="number" class="form-control" id="ptGoalNumber">
                       </div>
                     </div>
