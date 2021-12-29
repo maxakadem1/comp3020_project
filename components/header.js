@@ -30,14 +30,14 @@ class Header extends HTMLElement {
                             <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#goalsModal" onclick='fetchFields()'>Goals</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Library</a>
+                            <a class="nav-link" href="library.html">Library</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Menu </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="../signin/signin.html">Log In</a></li>
+                                <li><a class="dropdown-item" href="../signin.html">Log In</a></li>
                                 <li><a class="dropdown-item" href="#">Register</a></li>
                             </ul>
                         </li>
