@@ -1,8 +1,12 @@
 
 /*top links*/
 .navbar {
-    border-radius: 10px;
+    border-radius: 0.5rem;
 }
+.navbar-dark {
+    background-color: #262d31;
+}
+
 .navbar-dark .navbar-nav .nav-link {
     color:  #d5d6d7;
 }
@@ -15,6 +19,6 @@
     color: #80DBB3;
 }
 
-.navbar-dark .navbar-nav .nav-link.active{
-    color: #80DBB3;
-}
+/*.navbar-dark .navbar-nav .nav-link.active{*/
+/*    color: #80DBB3;*/
+/*}*/

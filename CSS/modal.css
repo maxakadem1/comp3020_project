@@ -3,27 +3,27 @@
 /*}*/
 
 .modal-content {
-    background-color: #131c21;
+    background-color: #333D42;
 }
 
 .modal-content .modal-header {
-    background-color: #262d31;
+    background-color: #131c21;
 }
 
 .modal-content .modal-header h5 {
     color: #d5d6d7;
 }
 
-.modal-content .modal-body {
-    background-color: #262d31;
-}
+/*.modal-content .modal-body {*/
+/*    background-color: #262d31;*/
+/*}*/
 
 .modal-content .modal-body p {
     color: #d5d6d7;
 }
 
 .modal-body .modal-footer {
-    background-color: #262d31;
+    background-color: #131c21;
 }
 
 
