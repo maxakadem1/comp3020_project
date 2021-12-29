@@ -7,6 +7,7 @@
     background-color: #131c21;
     color: #d5d6d7;
 }
+
 .btn:hover {
     background-color: #2d3134;
     border-color: #2d3134;
@@ -24,5 +25,25 @@
     border-color: #323739;
 }
 
+.btn-primary-surface {
+    background-color: #80DBB3;
+    color: #131c21;
+}
 
+.btn-primary-surface:hover {
+    background-color: #B5E9D1;
+    color: #131c21;
+}
+
+.btn-secondary-surface {
+    background-color: #262d31;
+    border-color: #80DBB3;
+    color: #d5d6d7;
+}
+
+.btn-secondary-surface:hover {
+    background-color: #374248;
+    border-color: #80DBB3;
+    color: #d5d6d7;
+}
 

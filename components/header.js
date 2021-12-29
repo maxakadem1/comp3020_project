@@ -61,18 +61,18 @@ class Header extends HTMLElement {
                     </div>
                     <br>
                     <h6>Set your Goal</h6>
-                    <div class = "form-group row">
-                      <div class = "col-3">
+                    <div class="form-group row input-title">
+                      <div class="col-3">
                         <label>Starting Week</label>
                         <input type="number" class="form-control" id="spendingStartWeek">
                       </div>
 
-                      <div class = "col-3">
+                      <div class="col-3">
                         <label>Goal Length (Weeks)</label>
                         <input type="number" class="form-control" id="spendingSpan">
                       </div>
 
-                      <div class = "col-2">
+                      <div class="col-2">
                         <label>Goal ($)</label>
                         <input type="number" class="form-control" id="spendingGoalNumber">
                       </div>
@@ -85,18 +85,18 @@ class Header extends HTMLElement {
                     </div>
                     <br>
                     <h6>Set your Goal</h6>
-                    <div class = "form-group row">
-                      <div class = "col-3">
+                    <div class="form-group row input-title">
+                      <div class="col-3">
                         <label>Starting Week</label>
                         <input type="number" class="form-control" id="ptStartWeek">
                       </div>
 
-                      <div class = "col-3">
+                      <div class="col-3">
                         <label>Goal Length (Weeks)</label>
                         <input type="number" class="form-control" id="ptSpan">
                       </div>
 
-                      <div class = "col-2">
+                      <div class="col-2">
                         <label>Goal (Hours)</label>
                         <input type="number" class="form-control" id="ptGoalNumber">
                       </div>
@@ -108,8 +108,8 @@ class Header extends HTMLElement {
                   </div>
                   <div class="modal-footer">
                     <p id = "goalSaveMessage"></p>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="emptyFields()">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="goalSave()">Save changes</button>
+                    <button type="button" class="btn btn-secondary-surface" data-bs-dismiss="modal" onclick="emptyFields()">Close</button>
+                    <button type="button" class="btn btn-primary-surface" onclick="goalSave()">Save changes</button>
                   </div>
                 </div>
               </div>

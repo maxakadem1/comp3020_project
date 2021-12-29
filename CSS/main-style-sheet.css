@@ -2,6 +2,7 @@
 @import 'charts.css';
 @import 'global.css';
 @import 'header.css';
+@import 'modal.css';
 
 /*
 background black #131c21
@@ -13,7 +14,11 @@ on surface text(size 22) lightgray #d5d6d7
 on surface secondary text(size 16) darkgray #9ea0a3
 text pressed #e9eaeb
 
-Primary/Secondary:
+Primary 80DBB3
+Primary hover #B5E9D1 or #E0F7EC
+on surface secondary hover #371248
+Secondary: #DB80A7
+
 darksalmon #d89663 rgb(216, 150, 99)
 goldenrod #c5a215 rgb(197, 162, 21)
 olive #91ab01 rgb(145, 171, 1)
