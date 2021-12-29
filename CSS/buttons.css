@@ -9,24 +9,25 @@
 }
 
 .btn:hover {
-    background-color: #2d3134;
-    border-color: #2d3134;
+    background-color: #515B61;
+    border-color: #515B61;
     color: #d5d6d7;
 }
 
 .btn-outline-dark {
-    border-color: #262d31;
-    border-radius: 10px;
+    border-color: #333D42;
+    border-radius: 0.5rem;
     border-width: 2px;
 }
 
 .btn-active {
-    background-color: #323739;
-    border-color: #323739;
+    background-color: #333D42;
+    border-color: #333D42;
 }
 
 .btn-primary-surface {
     background-color: #80DBB3;
+    border-radius: 0.5rem;
     color: #131c21;
 }
 

@@ -5,14 +5,15 @@
 @import 'modal.css';
 
 /*
-background black #131c21
-background black;goals #1e2d35 (original too dark)
-surface darkslategray #262d31
-on hover black #2d3134
-pressed darkslategray #323739
-on surface text(size 22) lightgray #d5d6d7
-on surface secondary text(size 16) darkgray #9ea0a3
-text pressed #e9eaeb
+background/text on primary #131c21
+
+surface #262d31 / #333D42
+surface on hover #2d3134 (if pressed) / #515B61
+
+pressed #323739
+on surface text(size 22) #d5d6d7
+on surface secondary text(size 16) #9ea0a3
+pressed text #e9eaeb
 
 Primary 80DBB3
 Primary hover #B5E9D1
