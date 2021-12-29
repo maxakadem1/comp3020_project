@@ -57,16 +57,17 @@ body{
     display: flex;
     justify-content: center;
     font-size: 200px;
+    color: #35cd96;
 }
 
 .card h2{
     padding: 10px;
-    color: #35cd96;
+    color: #d5d6d7;
 }
 .card p{
     padding: 10px;
     margin-top: auto;
-    color: #d5d6d7;
+    color: #9ea0a3;
 }
 
 .card a{
