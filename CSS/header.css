@@ -1,22 +1,20 @@
 
 /*top links*/
+.navbar {
+    border-radius: 10px;
+}
 .navbar-dark .navbar-nav .nav-link {
     color:  #d5d6d7;
 }
 
 .navbar-dark .navbar-nav a.nav-link:hover {
-    color: #35cd96;
+    color: #80DBB3;
 }
 
 .navbar-dark .navbar-nav a.nav-link:active {
-    color: #35cd96;
+    color: #80DBB3;
 }
 
-
-
-
-
-
 .navbar-dark .navbar-nav .nav-link.active{
-    color: #35cd96;
+    color: #80DBB3;
 }
