@@ -21,6 +21,7 @@ body{
     border-radius: 15px;
 }
 
+
 .card-img{
     height: 170px;
     margin-bottom: 15px;
@@ -51,6 +52,13 @@ body{
 .game6{
     background-image: url('https://assets1.ignimgs.com/2018/01/24/monsterhunterworldblog-1516809712015-1516811716019_160w.jpg?width=1280');
 }
+
+#plus{
+    display: flex;
+    justify-content: center;
+    font-size: 200px;
+}
+
 .card h2{
     padding: 10px;
     color: #35cd96;

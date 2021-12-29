@@ -95,3 +95,4 @@
  - Added 3 more games to library menu
  - Changed the button in Library to "Trailer" instead of "GameStat"
  - Added trailers to all games with links not blocking the website
+ - Added a blank "+" card for future addition of modal for adding games
