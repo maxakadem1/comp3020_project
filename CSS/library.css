@@ -83,7 +83,7 @@ body{
 }
 
 .card:hover {
-    background-color: #25353d;
+    /*background-color: #25353d;*/
     cursor: pointer;
     transform: scale(1.02);
     transition: all 0.5s ease;

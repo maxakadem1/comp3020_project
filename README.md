@@ -101,3 +101,4 @@
  - Added a proper homepage as an "introuction page" with video in the background
  - Added profile image to dropdown menu
  - Changed items in dropdown menu/added divider
+ - Sign in menu redesigned
