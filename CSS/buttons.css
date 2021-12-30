@@ -39,6 +39,7 @@
 .btn-secondary-surface {
     background-color: #262d31;
     border-color: #80DBB3;
+    border-radius: 0.5rem;
     color: #d5d6d7;
 }
 
