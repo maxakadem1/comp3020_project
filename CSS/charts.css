@@ -1,10 +1,7 @@
 .chart-background {
+    border: 0.06rem solid #646F75;
     border-radius: 0.5rem;
     margin-bottom: 1.25rem;
-
-    outline-style: solid;
-    outline-color: #646F75;
-    outline-width: 0.06rem;
 }
 
 .chart-tags {

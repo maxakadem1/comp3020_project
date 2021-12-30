@@ -21,7 +21,13 @@
 
 .dropdown-menu {
     background-color: #262d31;
+<<<<<<< HEAD
     border-color: #646F75;
+=======
+    border: 0.06rem solid #646F75;
+
+
+>>>>>>> 92807e32d8d733a1b566f1d418d3943a21ca918e
 }
 
 .dropdown-item {

@@ -19,9 +19,7 @@ body{
     margin: 15px;
     border-radius: 15px;
 
-    outline-style: solid;
-    outline-color: #646F75;
-    outline-width: 2px;
+    border: 0.06rem solid #646F75;
 }
 
 
