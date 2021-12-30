@@ -42,8 +42,18 @@
 
 .dropdown-item:hover {
    background: #515B61;
+   color: #d5d6d7;
 }
 
-/*.navbar-dark .navbar-nav .nav-link.active{*/
-/*    color: #80DBB3;*/
-/*}*/
+/*
+.navbar-dark .navbar-nav .nav-link.active{
+   color: #80DBB3;
+}
+*/
+
+#profile-pic{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    
+}
