@@ -19,6 +19,31 @@
     color: #80DBB3;
 }
 
+.dropdown-menu {
+    background-color: #262d31;
+    border-color: #646F75;
+
+}
+
+.dropdown-item {
+    color: #d5d6d7;
+}
+
+.dropdown-item:active {
+   color: #80DBB3;
+   background: #333D42;
+}
+
+.dropdown-item:focus {
+   color: #80DBB3;
+   background: #333D42;
+}
+
+
+.dropdown-item:hover {
+   background: #515B61;
+}
+
 /*.navbar-dark .navbar-nav .nav-link.active{*/
 /*    color: #80DBB3;*/
 /*}*/
