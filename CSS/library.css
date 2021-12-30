@@ -17,6 +17,10 @@ body{
     height: auto;
     margin: 15px;
     border-radius: 15px;
+
+    outline-style: solid;
+    outline-color: #646F75;
+    outline-width: 2px;
 }
 
 
