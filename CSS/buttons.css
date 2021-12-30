@@ -16,17 +16,13 @@
 }
 
 .btn-outline-dark {
-    border-color: #646F75;
-    /*border-color: #1e2d35;*/
-
+    border-color: #1e2d35;
     border-radius: 0.5rem;
     border-width: 0.06rem;
 }
 
 .btn-active {
-    background-color: #333D42;
-    /*background-color: #1e2d35;*/
-
+    background-color: #1e2d35;
     border-color: #333D42;
 }
 
