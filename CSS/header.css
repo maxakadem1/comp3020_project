@@ -1,4 +1,16 @@
 
+.dropdown-menu {
+    background-color: #333D42;
+}
+
+.dropdown-item {
+    color: #d5d6d7;
+}
+
+.dropdown-item:hover {
+    color: #80DBB3;
+}
+
 /*top links*/
 .navbar {
     border-radius: 0.5rem;
