@@ -12,14 +12,18 @@ body{
 .card{
     display: flex;
     flex-direction: column; /*Creates cards of equal sizes, maintaining the grid*/
+<<<<<<< HEAD
     /*background: #333D42;*/
     background: #1e2d35;
+=======
+    background: #1f2c33;
+>>>>>>> 0caa9afe43e3d9402784a8ee78434cba750a0ff9
     width: 250px;
     height: auto;
     margin: 15px;
     border-radius: 15px;
+   /* border: 0.06rem solid #646F75;*/
 
-    border: 0.06rem solid #646F75;
 }
 
 
@@ -58,7 +62,7 @@ body{
     display: flex;
     justify-content: center;
     font-size: 200px;
-    color: #80DBB3;
+    color: #35cd96;
 }
 
 .card h2{
@@ -72,7 +76,7 @@ body{
 }
 
 .card a{
-    background-color: #80DBB3;
+    background-color: #35cd96;
     color: #131c21;
     padding: 15px 20px;
     display: block;
@@ -81,7 +85,7 @@ body{
 }
 
 .card:hover {
-    /*background-color: #515B61;*/
+    /*background-color: #25353d;*/
     cursor: pointer;
     transform: scale(1.02);
     transition: all 0.5s ease;

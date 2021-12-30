@@ -2,6 +2,7 @@
 /*top links*/
 .navbar {
     border-radius: 0.5rem;
+    z-index: 20;
 }
 .navbar-dark {
     background-color: #262d31;
@@ -21,13 +22,7 @@
 
 .dropdown-menu {
     background-color: #262d31;
-<<<<<<< HEAD
-    border-color: #646F75;
-=======
     border: 0.06rem solid #646F75;
-
-
->>>>>>> 92807e32d8d733a1b566f1d418d3943a21ca918e
 }
 
 .dropdown-item {
@@ -45,10 +40,28 @@
 }
 
 .dropdown-item:hover {
+<<<<<<< HEAD
     background: #515B61;
     color: #d5d6d7;
+=======
+   background: #515B61;
+   color: #d5d6d7;
+>>>>>>> 0caa9afe43e3d9402784a8ee78434cba750a0ff9
 }
 
-/*.navbar-dark .navbar-nav .nav-link.active{*/
-/*    color: #80DBB3;*/
-/*}*/
+/*
+.navbar-dark .navbar-nav .nav-link.active{
+   color: #80DBB3;
+}
+*/
+
+#profile-pic{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    
+}
+
+.dropdown-divider{
+    background-color: #7e8083;
+}
