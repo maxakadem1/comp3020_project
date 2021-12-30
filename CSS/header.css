@@ -21,7 +21,8 @@
 
 .dropdown-menu {
     background-color: #262d31;
-    border-color: #646F75;
+    border: 0.06rem solid #646F75;
+
 
 }
 
