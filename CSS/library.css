@@ -12,8 +12,8 @@ body{
 .card{
     display: flex;
     flex-direction: column; /*Creates cards of equal sizes, maintaining the grid*/
-    background: #333D42;
-    /*background: #1e2d35;*/
+    /*background: #333D42;*/
+    background: #1e2d35;
     width: 250px;
     height: auto;
     margin: 15px;
