@@ -98,7 +98,7 @@ class Header extends HTMLElement {
                       </div>
 
                       <div class="col-2">
-                        <label>Budget (Hrs)</label>
+                        <label>Limit (Hours)</label>
                         <input type="number" class="form-control" id="ptGoalNumber">
                       </div>
                     </div>
