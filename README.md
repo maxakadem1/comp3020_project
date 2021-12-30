@@ -96,3 +96,8 @@
  - Changed the button in Library to "Trailer" instead of "GameStat"
  - Added trailers to all games with links not blocking the website
  - Added a blank "+" card for future addition of modal for adding games
+
+ 30.12.2021 - Max
+ - Added a proper homepage as an "introuction page" with video in the background
+ - Added profile image to dropdown menu
+ - Changed items in dropdown menu/added divider

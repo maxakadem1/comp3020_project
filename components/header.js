@@ -37,9 +37,10 @@ class Header extends HTMLElement {
                         <li class="nav-item">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img id="profile-pic" src="../images/profile_pic.jpg"> </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="signin.html">Log In</a></li>
                                 <li><a class="dropdown-item" href="#">Profile</a></li>
                                 <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <div class="dropdown-divider"></div>
+                                <li><a class="dropdown-item" href="signin.html">Sign Out</a></li>
                             </ul>
                         </li>
                     </ul>
