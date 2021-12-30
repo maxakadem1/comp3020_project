@@ -2,6 +2,7 @@
 /*top links*/
 .navbar {
     border-radius: 0.5rem;
+    z-index: 20;
 }
 .navbar-dark {
     background-color: #262d31;
@@ -43,8 +44,22 @@
 
 .dropdown-item:hover {
    background: #515B61;
+   color: #d5d6d7;
 }
 
-/*.navbar-dark .navbar-nav .nav-link.active{*/
-/*    color: #80DBB3;*/
-/*}*/
+/*
+.navbar-dark .navbar-nav .nav-link.active{
+   color: #80DBB3;
+}
+*/
+
+#profile-pic{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    
+}
+
+.dropdown-divider{
+    background-color: #7e8083;
+}
