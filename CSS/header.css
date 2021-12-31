@@ -1,7 +1,6 @@
 
 /*top links*/
 .navbar {
-    border-radius: 0.5rem;
     z-index: 20;
 }
 .navbar-dark {
@@ -23,8 +22,6 @@
 .dropdown-menu {
     background-color: #262d31;
     border: 0.06rem solid #646F75;
-
-
 }
 
 .dropdown-item {
@@ -32,15 +29,14 @@
 }
 
 .dropdown-item:active {
-   color: #80DBB3;
-   background: #333D42;
+    color: #80DBB3;
+    background: #333D42;
 }
 
 .dropdown-item:focus {
-   color: #80DBB3;
-   background: #333D42;
+    color: #333D42;
+    background: #80DBB3;
 }
-
 
 .dropdown-item:hover {
    background: #515B61;

@@ -57,6 +57,12 @@ const config = {
                     size: 22
                 },
                 text: 'Favourite Tags'
+            },
+            legend: {
+                display: true,
+                labels: {
+                    color: '#9ea0a3',
+                }
             }
         },
     },
