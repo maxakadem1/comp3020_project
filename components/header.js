@@ -5,10 +5,10 @@ class Header extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-            <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-           
+            <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+
                 <a class="navbar-brand" href="index.html">GStat</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,6 +35,7 @@ class Header extends HTMLElement {
                         </li>
                     </ul>
                     <ul class="navbar-nav">
+                      <div class = "btn-group">
                         <li class="nav-item">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img id="profile-pic" src="../images/profile_pic.jpg"> </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -44,9 +45,10 @@ class Header extends HTMLElement {
                                 <li><a class="dropdown-item" href="signin.html">Sign Out</a></li>
                             </ul>
                         </li>
+                      </div>
                     </ul>
                 </div>
-                
+
             </div>
         </nav>
             </div>

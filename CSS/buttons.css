@@ -27,13 +27,13 @@
 }
 
 .btn-primary-surface {
-    background-color: #80DBB3;
+    background-color: #35cd96;
     border-radius: 0.5rem;
     color: #131c21;
 }
 
 .btn-primary-surface:hover {
-    background-color: #B5E9D1;
+    background-color: #2ea77a;
     color: #131c21;
 }
 
@@ -46,7 +46,7 @@
 
 .btn-secondary-surface:hover {
     background-color: #374248;
-    border-color: #80DBB3;
+    border-color: #2ea77a;
     color: #d5d6d7;
 }
 
