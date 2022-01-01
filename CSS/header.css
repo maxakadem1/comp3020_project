@@ -4,7 +4,7 @@
     z-index: 20;
 }
 .navbar-dark {
-    background-color: #262d31;
+  background-color: rgba(38, 45, 49, 0.5);
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -63,3 +63,26 @@
 .container-fluid {
     padding: 0 0px
 }
+
+.center {
+    position: relative;
+}
+
+@media (min-width: 992px) {
+  .vline {
+      margin: 0;
+      position: absolute;
+      top: 20%;
+      border-left: 1px solid #7e8083;
+      height: 1.5rem;
+   }
+}
+@media (max-width: 991px) {
+  .vline {
+      margin: 0;
+      position: absolute;
+      top: 20%;
+      border-top: 1px solid #7e8083;
+      width: 75%;
+   }
+ }
