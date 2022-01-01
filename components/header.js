@@ -28,10 +28,41 @@ class Header extends HTMLElement {
                             <a class="nav-link" href="tags.html" >Tags</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#goalsModal" onclick='fetchFields()'>Goals</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="library.html">Library</a>
+                        </li>
+
+                        <style>
+                          .center {
+                            position: relative;
+                          }
+
+                          .vline {
+                            margin: 0;
+                            position: absolute;
+                            top: 20%;
+                            border-left: 1px solid #7e8083;
+                            height: 1.5rem;
+                          }
+                        </style>
+
+                        <div class="center">
+                          <div class ="vline"></div>
+                        </div>
+
+<!--
+                        <div style="
+                        border-left:1px solid #7e8083; height:1.5rem;top: 50%;left: 50%
+                        margin: 0;
+                        position: relative;
+                        top: 50%;
+                        left: 50%;
+                        -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+
+                        "></div>
+-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#goalsModal" onclick='fetchFields()'>Goals</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
