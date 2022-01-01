@@ -35,14 +35,17 @@ class Header extends HTMLElement {
                           .center {
                             position: relative;
                           }
-
-                          .vline {
-                            margin: 0;
-                            position: absolute;
-                            top: 20%;
-                            border-left: 1px solid #7e8083;
-                            height: 1.5rem;
+                          
+                          @media (min-width: 992px) {
+                            .vline {
+                                margin: 0;
+                                position: absolute;
+                                top: 20%;
+                                border-left: 1px solid #7e8083;
+                                height: 1.5rem;
+                             }
                           }
+                          
                         </style>
 
                         <div class="center">
