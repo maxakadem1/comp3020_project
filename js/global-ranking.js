@@ -49,7 +49,7 @@ const plugin = {
         const ctx = chart.canvas.getContext('2d');
         ctx.save();
         ctx.globalCompositeOperation = 'destination-over';
-        ctx.fillStyle = '#333D42';
+        ctx.fillStyle = '#1e2d35';
         ctx.fillRect(0, 0, chart.width, chart.height);
         ctx.restore();
     }
