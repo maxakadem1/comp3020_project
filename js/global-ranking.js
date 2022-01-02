@@ -172,3 +172,5 @@ const configGlobalSpending = {
     },
     plugins: [plugin]
 };
+
+document.getElementById("globalRankingButton").className = document.getElementById("globalRankingButton").className + "-active";
