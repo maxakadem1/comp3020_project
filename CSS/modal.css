@@ -61,3 +61,18 @@
 .btn-close {
     background: transparent url("../images/close.svg") center/1em auto no-repeat;
 }
+
+.btn-secondary-surface{
+    background-color: #262d31;
+    border-color: #80DBB3;
+    border-radius: 0.5rem;
+    color: #d5d6d7;
+    width: 5rem;
+}
+
+
+.btn-secondary-surface:hover{
+    background-color: #374248;
+    border-color: #80DBB3;
+    color: #d5d6d7;
+}

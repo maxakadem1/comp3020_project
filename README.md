@@ -102,3 +102,6 @@
  - Added profile image to dropdown menu
  - Changed items in dropdown menu/added divider
  - Sign in menu redesigned
+
+ 02.01.2022 - Max
+ - Modal for register implemented
