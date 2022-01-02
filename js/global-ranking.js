@@ -59,6 +59,10 @@ const configTotalPlaytime = {
     type: 'line',
     data: data,
     options: {
+        interaction: {
+            mode: 'index',
+            intersect: false,
+        },
         plugins: {
             title: {
                 color: '#d5d6d7',
