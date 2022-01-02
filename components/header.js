@@ -150,7 +150,7 @@ class Header extends HTMLElement {
                     Settings menu has not been implemented. The settings menu would allow the user to change colour themes, languages, privacy, etc.
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary-surface" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary-surface" data-bs-dismiss="modal">Cancel</button>
                   </div>
                 </div>
               </div>

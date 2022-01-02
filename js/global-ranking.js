@@ -26,6 +26,8 @@ const spendingTitle = 'Spending History'
 const xSpendingLabel = 'Week'
 const ySpendingLabel = 'Dollars Spent (CAD)'
 
+Chart.defaults.font.family = "'Poppins', sans-serif";
+
 const data2 = {
     labels: playtimeDefaultLabel,
     datasets: [{

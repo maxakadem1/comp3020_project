@@ -5,6 +5,8 @@ const xLabel = 'Week'
 const yLabel = 'Dollars Spent (CAD)'
 const spendingData1 = 'User Spending'
 
+Chart.defaults.font.family = "'Poppins', sans-serif";
+
 // <block:setup:1>
 const data = {
     labels: defaultLabel,
@@ -31,7 +33,7 @@ const plugin = {
 };
 
 // <block:config:0>
-const configSpending = {
+let configSpending = {
     type: 'bar',
     data: data,
     options: {
