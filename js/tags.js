@@ -19,6 +19,9 @@ const borderColours = [
     'rgba(208, 91, 186)',
     'rgb(201, 203, 207)'
 ]
+
+Chart.defaults.font.family = "'Poppins', sans-serif";
+
 // <block:setup:1>
 const data = {
     labels: favouriteTags,

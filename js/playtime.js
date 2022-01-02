@@ -7,6 +7,9 @@ const dataset1 = 'Game 1'
 const dataset2 = 'Game 2'
 const dataset3 = 'Game 3'
 const dataset4 = "Game 4"
+
+Chart.defaults.font.family = "'Poppins', sans-serif";
+
 // <block:setup:1>
 const data = {
     labels: playtimeDefaultLabel,
