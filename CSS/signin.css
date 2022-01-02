@@ -16,7 +16,7 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  
+
 }
 
 .form-signin {
@@ -82,3 +82,6 @@ body {
   color: #25a174!important;
 }
 
+.errorP{
+  color: #FF0000;
+}

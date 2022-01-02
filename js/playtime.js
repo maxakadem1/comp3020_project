@@ -113,4 +113,7 @@ const configPlaytime = {
     },
     plugins: [plugin]
 };
+
+document.getElementById("playtimeButton").className = document.getElementById("playtimeButton").className + "-active";
+
 // </block:config>

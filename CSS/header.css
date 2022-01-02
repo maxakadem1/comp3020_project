@@ -19,6 +19,16 @@
     color: #80DBB3;
 }
 
+.nav-text:hover{
+  color: #80DBB3;
+}
+
+.nav-text-active{
+  color: #80DBB3;
+  font-weight: 550;
+
+}
+
 .dropdown-menu {
     background-color: #262d31;
     border: 0.06rem solid #646F75;
@@ -49,11 +59,10 @@
 }
 */
 
-#profile-pic{
+.profilepic{
     width: 35px;
     height: 35px;
     border-radius: 50%;
-
 }
 
 .dropdown-divider{
