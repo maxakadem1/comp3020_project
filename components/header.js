@@ -130,7 +130,7 @@ class Header extends HTMLElement {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    The profile is not implemented.  The profile page would allow the user to change their password and email associated with their account, as well as their profile picture.  It would also allow the user to link game service accounts (Steam, PSN, Xbox, etc.) so that their game data would import automatically.
+                    Profile has not been implemented. The profile page would allow the user to change their password, email associated with their account, and their profile picture. It also allows the user to link game service accounts (Steam, PSN, Xbox, etc.) so their game data imports automatically.
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary-surface" data-bs-dismiss="modal">Cancel</button>
@@ -147,7 +147,7 @@ class Header extends HTMLElement {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    The settings menu is not implemented.  The settings menu would allow the user to change colour themes, languages, etc.
+                    Settings menu has not been implemented. The settings menu would allow the user to change colour themes, languages, privacy, etc.
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary-surface" data-bs-dismiss="modal">Close</button>

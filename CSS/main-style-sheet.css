@@ -16,7 +16,7 @@ on surface text(size 22) #d5d6d7
 on surface secondary text(size 16) #9ea0a3
 pressed text #e9eaeb
 
-Primary 80DBB3
+Primary 80DBB3 rgb(128, 219, 179)
 Primary hover #B5E9D1
 on surface secondary hover #371248
 Secondary: #DB80A7
