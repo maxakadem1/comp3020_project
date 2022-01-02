@@ -89,4 +89,7 @@ const configSpending = {
     },
     plugins: [plugin]
 };
+
+document.getElementById("spendingButton").className = document.getElementById("spendingButton").className + "-active";
+
 // </block:config>

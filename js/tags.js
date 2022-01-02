@@ -68,4 +68,7 @@ const config = {
     },
     plugins: [plugin]
 };
+
+document.getElementById("tagsButton").className = document.getElementById("tagsButton").className + "-active";
+
 // </block:config>
