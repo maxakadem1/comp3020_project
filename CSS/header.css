@@ -1,4 +1,3 @@
-
 /*top links*/
 .navbar {
     z-index: 20;
@@ -26,8 +25,6 @@
 
 .nav-text-active{
   color: #80DBB3;
-  font-weight: 550;
-
 }
 
 .dropdown-menu {
@@ -53,12 +50,6 @@
    background: #515B61;
    color: #d5d6d7;
 }
-
-/*
-.navbar-dark .navbar-nav .nav-link.active{
-   color: #80DBB3;
-}
-*/
 
 .profilepic{
     width: 35px;
