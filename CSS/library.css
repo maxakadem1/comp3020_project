@@ -30,6 +30,7 @@ body {
     background-size: cover;
     border-radius: 15px 15px 0 0; /*To border the top of the images according to cards*/
 }
+
 .card h2 {
     padding: 10px;
     color: #d5d6d7;
@@ -42,8 +43,6 @@ body {
 }
 
 .card a {
-    background-color: #35cd96;
-    color: #131c21;
     padding: 15px 20px;
     display: block;
     margin: auto 50px 20px;

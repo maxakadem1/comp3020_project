@@ -6,6 +6,7 @@
 .btn {
     background-color: #131c21;
     color: #d5d6d7;
+    min-width: 5rem;
 }
 
 .btn:hover {
@@ -27,14 +28,14 @@
 }
 
 .btn-primary-surface {
-    /*background-color: #35cd96;*/
-    background-color: rgb(128, 219, 179);
+    background-color: #80DBB3;
+    border-color: #80DBB3;
     border-radius: 0.5rem;
     color: #131c21;
 }
 
 .btn-primary-surface:hover {
-    background-color: rgb(48, 156, 109);
+    background-color: #B5E9D1;
     color: #131c21;
 }
 
@@ -43,6 +44,7 @@
     border-color: #80DBB3;
     border-radius: 0.5rem;
     color: #d5d6d7;
+    width: 5rem;
 }
 
 .btn-secondary-surface:hover {
