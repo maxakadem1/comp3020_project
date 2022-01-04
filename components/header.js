@@ -106,7 +106,7 @@ class Header extends HTMLElement {
                       </div>
 
                       <div class="col-2">
-                        <label>Limit (Hours)</label>
+                        <label>Time (Hours)</label>
                         <input type="number" class="form-control" id="ptGoalNumber">
                       </div>
                     </div>
