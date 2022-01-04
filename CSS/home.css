@@ -19,7 +19,6 @@
     left: 16%;
 }
 
-
 .text h2{
     font-size: 5em;
     font-weight: 800;
@@ -31,7 +30,6 @@
     font-size: 4em;
     font-weight: 700;
     line-height: 1em;
-    /*text-transform: uppercase;*/
     color: #d5d6d7;
 }
 
@@ -40,7 +38,7 @@
     margin: 20px 0;
     font-weight: 400;
     max-width: 700px;
-    color: #d5d6d7;
+    color: #9ea0a3;
 }
 
 .text a{

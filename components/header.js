@@ -76,7 +76,7 @@ class Header extends HTMLElement {
                       </div>
 
                       <div class="col-3">
-                        <label>Goal Length (Weeks)</label>
+                        <label>Duration (Weeks)</label>
                         <input type="number" class="form-control" id="spendingSpan">
                       </div>
 
@@ -101,7 +101,7 @@ class Header extends HTMLElement {
                       </div>
 
                       <div class="col-3">
-                        <label>Goal Length (Weeks)</label>
+                        <label>Duration (Weeks)</label>
                         <input type="number" class="form-control" id="ptSpan">
                       </div>
 
