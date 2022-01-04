@@ -1,26 +1,17 @@
-# gaming-data-tracker-GStat
-Human Computer Interaction Fall 2021 Group Project
-
-A high-fidelity vertical prototype for the web application GStat.
-
-This prototype is built using :
-* Bootstrap v5.1.3
-* Chart.js v3.7.0
-
 22.09.2021 - Max
 
 - Added main files to the repo (styles.css/ index.html/ app.js)
 
 25.10.2021 - Max
 
-- Started working on the left side bar
+- Started working on the left sidebar
 - Added icon library and guideline for future use
 - Added charts library from Charts.js
 
 26.10.2021 - Max
 
 - Added bootstrap to the project
-- Removed unnececary code that was used for testing
+- Removed unnecessary code that was used for testing
 
 30.10.2021 - Yengin
 
@@ -29,8 +20,8 @@ This prototype is built using :
 
 30.10.2021 - Max
 
-- Changed left side bar to top side bar
-- Added a bootstap folder to the js and css folder. Bootstrap fully implemented
+- Changed left sidebar to top sidebar
+- Added a bootstrap folder to the js and css folder. Bootstrap fully implemented
 - Some minor changes to the design
 
 1.11.2021 - Max
@@ -123,7 +114,7 @@ This prototype is built using :
 
 30.12.2021 - Max
 
-- Added a proper homepage as an "introuction page" with video in the background
+- Added a proper homepage as an "introduction page" with video in the background
 - Added profile image to dropdown menu
 - Changed items in dropdown menu/added divider
 - Sign in menu redesigned
