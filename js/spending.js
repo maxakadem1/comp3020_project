@@ -32,11 +32,16 @@ const plugin = {
     }
 };
 
+
 // <block:config:0>
 let configSpending = {
     type: 'bar',
     data: data,
     options: {
+        interaction: {
+            mode: 'index',
+            intersect: false,
+        },
         plugins: {
             title: {
                 color: '#d5d6d7',

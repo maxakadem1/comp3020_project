@@ -59,6 +59,11 @@ const configPlaytime = {
     type: 'bar',
     data: data,
     options: {
+        interaction: {
+            mode: 'index',
+            intersect: false,
+            position:'nearest',
+        },
         plugins: {
             title: {
                 color: '#d5d6d7',
