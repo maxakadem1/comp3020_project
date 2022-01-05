@@ -92,12 +92,12 @@ function goalSave() {
     clearSaveMessage()
     //If the starting and ending week are not null, ant if the starting week is less than or equal to the ending week, save
     var currSpendingData = JSON.parse(localStorage.getItem('spendingData'))
-    var spendingStartValid = document.getElementById('spendingStartWeek') != null && document.getElementById('spendingStartWeek').value >= 0
-    var ptStartValid = document.getElementById('ptStartWeek') != null && document.getElementById('ptStartWeek').value >= 0
-    var spendingGoalValid = document.getElementById('spendingGoalNumber') != null && document.getElementById('spendingGoalNumber').value > 0
-    var ptGoalValid = document.getElementById('ptGoalNumber') != null && document.getElementById('ptGoalNumber').value > 0
-    var spendingSpanValid = document.getElementById('spendingSpan') != null && document.getElementById('spendingSpan').value >= 0
-    var ptSpanValid = document.getElementById('ptSpan') != null && document.getElementById('ptSpan').value >= 0
+    var spendingStartValid = document.getElementById('spendingStartWeek') != null && document.getElementById('spendingStartWeek').value != "" && document.getElementById('spendingStartWeek').value >= 0
+    var ptStartValid = document.getElementById('ptStartWeek') != null && document.getElementById('ptStartWeek').value != "" && document.getElementById('ptStartWeek').value >= 0
+    var spendingGoalValid = document.getElementById('spendingGoalNumber') != null && document.getElementById('spendingGoalNumber').value != "" && document.getElementById('spendingGoalNumber').value > 0
+    var ptGoalValid = document.getElementById('ptGoalNumber') != null && document.getElementById('ptGoalNumber').value != "" && document.getElementById('ptGoalNumber').value > 0
+    var spendingSpanValid = document.getElementById('spendingSpan') != null && document.getElementById('spendingSpan').value != "" && document.getElementById('spendingSpan').value >= 0
+    var ptSpanValid = document.getElementById('ptSpan') != null && document.getElementById('ptSpan').value != "" && document.getElementById('ptSpan').value >= 0
 
     if (spendingStartValid && ptStartValid && spendingSpanValid && ptSpanValid) {
         if (spendingGoalValid && ptGoalValid) {
@@ -176,9 +176,9 @@ function createMessage(spending, playtime) {
     }   //Middle of goal period
     else if (+myPlaytimeStart + +myPlaytimeSpan >= currSpendingData.length - 1) {
         if (+myPlaytimeStart + +myPlaytimeSpan - (currSpendingData.length - 1) == 1) {
-            playtimeMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have played " + playtime + " hours out of your " + myPlaytimeGoal + " hour budget with 1 week remaining."
+            playtimeMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have played " + playtime + " hours out of your " + myPlaytimeGoal + " hour limit with 1 week remaining."
         } else {
-            playtimeMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have played " + playtime + " hours out of your " + myPlaytimeGoal + " hour budget with " + ((+myPlaytimeStart + +myPlaytimeSpan) - (+currSpendingData.length - 1)) + " weeks remaining."
+            playtimeMessage = "Since your goal has started on week " + JSON.parse(localStorage.getItem('spendingStartWeekSaved')) + ", you have played " + playtime + " hours out of your " + myPlaytimeGoal + " hour limit with " + ((+myPlaytimeStart + +myPlaytimeSpan) - (+currSpendingData.length - 1)) + " weeks remaining."
         }
         if (playtime < myPlaytimeGoal) {
             playtimeMessage += "<br>Keep up the good work!"
