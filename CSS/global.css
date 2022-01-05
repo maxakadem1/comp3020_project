@@ -17,3 +17,7 @@ p {
     margin-bottom: auto;
     margin-top: auto;
 }
+
+html {
+  margin-left: calc(100vw - 100%);
+}
